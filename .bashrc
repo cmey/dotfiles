@@ -12,8 +12,6 @@ export PATH="~/bin:$PATH"
 
 export PATH="~/Downloads/gcutil-1.8.3:~/Downloads/gsutil:$PATH"
 
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 export LD_LIBRARY_PATH=/usr/local/lib:/opt/X11/lib:$LD_LIBRARY_PATH
@@ -30,5 +28,20 @@ export PYTHONPATH="/usr/local/lib/python2.7:$PYTHONPATH"
 
 export PS1='\u:\W\$ '
 
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
 # Colors
 export GREP_OPTIONS='--color=auto'
+
+
+#
+# Git
+#
+source `brew --prefix`/etc/bash_completion.d/git-completion.bash
+source `brew --prefix`/etc/bash_completion.d/git-prompt.sh
+
+if type __git_ps1 &>/dev/null; then
+    export GIT_PS1_SHOWCOLORHINTS=false
+    export GIT_PS1_SHOWDIRTYSTATE=false
+    export PS1="\h:\W\$(__git_ps1) λ "
+fi
