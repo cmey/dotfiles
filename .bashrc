@@ -26,13 +26,12 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 export PYTHONPATH="/usr/local/lib/python2.7:$PYTHONPATH"
 
-export PS1='\u:\W\$ '
-
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+export PS1='\u:\W\$ '
 
 # Colors
 export GREP_OPTIONS='--color=auto'
-
+export CLICOLOR=1
 
 #
 # Git
