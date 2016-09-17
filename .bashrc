@@ -42,5 +42,5 @@ source `brew --prefix`/etc/bash_completion.d/git-prompt.sh
 if type __git_ps1 &>/dev/null; then
     export GIT_PS1_SHOWCOLORHINTS=false
     export GIT_PS1_SHOWDIRTYSTATE=false
-    export PS1="\h:\W\$(__git_ps1) λ "
+    export PS1="\h:\W\$(__git_ps1) $ "
 fi
