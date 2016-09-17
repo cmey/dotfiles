@@ -29,3 +29,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PYTHONPATH="/usr/local/lib/python2.7:$PYTHONPATH"
 
 export PS1='\u:\W\$ '
+
+# Colors
+export GREP_OPTIONS='--color=auto'
