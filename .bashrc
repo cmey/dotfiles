@@ -1,13 +1,13 @@
 # BASH ALIASES
-alias dir="ll"
+alias ls="ls -aGh"  # F adds symbols at end of non simple files
+alias ll="ls -l"
+alias dir="ls"
 alias dor="dir"
 alias dockerenv='eval $(docker-machine env default)'
 alias emacs='open -a /Applications/Emacs.app $1'
 alias find='gfind'  # find . ! -readable -prune -name anaconda
 alias k='kill %%'
 alias t='py.test --fast --automated -n auto'
-alias ls="ls -aGFh"
-alias ll="ls -l"
 alias g='googler -t y1 --lucky'  # time 1 year, open first hit
 
 alias pos='source ~/bin/env-poseidon-Butterfly.sh'
