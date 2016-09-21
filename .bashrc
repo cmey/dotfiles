@@ -3,6 +3,7 @@ alias dockerenv='eval $(docker-machine env default)'
 alias emacs='open -a /Applications/Emacs.app $1'
 alias find='gfind'  # find . ! -readable -prune -name anaconda
 alias k='kill %'
+alias t='py.test --fast --automated -n auto'
 alias ll='ls -l'
 alias ls='ls -a'
 alias pos='eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"'
