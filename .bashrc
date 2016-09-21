@@ -89,8 +89,12 @@ export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; histor
 #
 export GIT_PS1_SHOWCOLORHINTS=true
 export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PROMPT_THEME=Solarized
 source `brew --prefix`/etc/bash_completion.d/git-completion.bash
 source `brew --prefix`/etc/bash_completion.d/git-prompt.sh
+if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+    source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+fi
 
 if type __git_ps1 &>/dev/null; then
     export PS1="\h:\W\$(__git_ps1) $ "

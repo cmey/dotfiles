@@ -3,7 +3,7 @@ set -euo pipefail
 mkdir -p ~/bin
 
 brew install bash-completion
-ln -s $PWD/git-completion.bash ~/bin/git-completion.bash
+brew install bash-git-prompt
 
 ln -s $PWD/.bashrc ~/.bashrc
 ln -s $PWD/.bash_profile ~/.bash_profile
