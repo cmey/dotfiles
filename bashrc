@@ -11,7 +11,7 @@ alias t='py.test --fast --automated -n auto'
 alias g='googler -t y1 --lucky'  # time 1 year, open first hit
 
 alias pos='source ~/bin/env-poseidon-Butterfly.sh'
-alias pos='eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"'
+# alias pos='eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"'
 alias py="source ~/bin/env-pyenv-standalone.sh"
 alias i="cd /Users/cmey/Code/GitHub/ButterflyNetwork/poseidon/imaging/imaging; pos"
 alias ipy="ipython notebook"
@@ -87,13 +87,15 @@ export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; histor
 #
 # Git
 #
+# git mergetool --tool=p4merge
+# Setting the mergetool.keepBackup configuration variable to false
 export GIT_PS1_SHOWCOLORHINTS=true
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PROMPT_THEME=Solarized
 source `brew --prefix`/etc/bash_completion.d/git-completion.bash
 source `brew --prefix`/etc/bash_completion.d/git-prompt.sh
-if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
-    source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
+    source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
 fi
 
 if type __git_ps1 &>/dev/null; then
