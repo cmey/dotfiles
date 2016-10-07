@@ -20,6 +20,6 @@ brew install bash-git-prompt
 git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
 
 # Install links (hard b/c some script fails on symlink)
-ln -s $PWD/bashrc ~/.bashrc
-ln -s $PWD/bash_profile ~/.bash_profile
-ln -s $PWD/iterm2_shell_integration.bash ~/.iterm2_shell_integration.bash
+ln $PWD/bashrc ~/.bashrc
+ln $PWD/bash_profile ~/.bash_profile
+ln $PWD/iterm2_shell_integration.bash ~/.iterm2_shell_integration.bash
