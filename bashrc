@@ -110,3 +110,5 @@ export CLICOLOR=1
 
 # FISH SHELL, see config in TODO: find config file name
 #fish
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
