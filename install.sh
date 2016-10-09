@@ -1,23 +1,32 @@
 #!/bin/bash
+
 # Fail fast
 set -euo pipefail
+
 # Here
 SETUP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 # Utils used later (messages, message color)
 source $SETUP_DIR/util.sh
 
+report "Making ~/bin" YELLOW
 mkdir -p ~/bin
 
-# Homebrew
-if ! which brew &> /dev/null; then
-    report "Installing Homebrew..." YELLOW
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-brew install bash-completion
-brew install bash-git-prompt
+# Install essential build tools
+source $SETUP_DIR/build-essentials.sh
+
+# Install Homebrew if needed
+source $SETUP_DIR/brew.sh
+
+# Git
+brew install git git-lfs
+git lfs install --force
 
 # Powerline Meslo fonts
 git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
+
+# Bash
+brew install bash-completion bash-git-prompt
 
 # Install links (hard b/c some script fails on symlink)
 ln $PWD/bashrc ~/.bashrc
