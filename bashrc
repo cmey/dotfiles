@@ -35,6 +35,10 @@ export PYTHONPATH="/usr/local/lib/python2.7:$PYTHONPATH"
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export EDITOR=vim
 
+# RUBY
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
 # JULIA
 #export PATH="$JULIAPATH/bin:$PATH"
 #export JULIADIR="/Applications/Julia-0.3.11.app/Contents/MacOS"
@@ -43,7 +47,6 @@ export EDITOR=vim
 #alias Julia=julia
 # Escher
 export PATH=~/.julia/v0.4/Escher/bin:$PATH
-
 
 # BREW QT5
 #If you build your own software and it requires this formula, you'll need to add to your
@@ -72,7 +75,6 @@ export PYTHONPATH=/Users/cmey/Code/GitHub/arrayfire-python:$PYTHONPATH
 # AWS bash completion
 complete -C aws_completer aws
 
-
 # BASH HISTORY
 # Increase history size.
 export HISTFILESIZE=10000000
@@ -84,16 +86,23 @@ shopt -s histappend
 # - After each command, append to the history file and reread it.
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
-#
-# Git
-#
+# BASH Colors
+export CLICOLOR=1
+export GREP_OPTIONS='--color=auto'
+
+# GIT
 # git mergetool --tool=p4merge
 # Setting the mergetool.keepBackup configuration variable to false
 export GIT_PS1_SHOWCOLORHINTS=true
-export GIT_PS1_SHOWDIRTYSTATE=true
-export GIT_PROMPT_THEME=Solarized
+export GIT_PS1_SHOWDIRTYSTATE=  # true
+export GIT_PS1_SHOWUNTRACKEDFILES=  # true
+export GIT_PROMPT_ONLY_IN_REPO=1
+export GIT_PROMPT_FETCH_REMOTE_STATUS=0  # uncomment to avoid fetching remote status
+export GIT_PROMPT_SHOW_UNTRACKED_FILES=no  # can be no, normal or all; determines counting of untracked files
+export GIT_PROMPT_SHOW_CHANGED_FILES_COUNT=0 # uncomment to avoid printing the number of changed files
+export GIT_PROMPT_THEME=Solarized # use theme optimized for solarized color scheme
 source `brew --prefix`/etc/bash_completion.d/git-completion.bash
-source `brew --prefix`/etc/bash_completion.d/git-prompt.sh
+source `brew --prefix`/etc/bash_completion.d/git-prompt.sh  # git one's
 if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
     source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
 fi
@@ -104,11 +113,5 @@ fi
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
-# Colors
-export GREP_OPTIONS='--color=auto'
-export CLICOLOR=1
-
 # FISH SHELL, see config in TODO: find config file name
 #fish
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
