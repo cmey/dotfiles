@@ -24,11 +24,12 @@ git lfs install --force
 
 # Powerline Meslo fonts
 git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
+cd $SETUP_DIR
 
 # Bash
 brew install bash-completion bash-git-prompt
 
 # Install links (hard b/c some script fails on symlink)
-ln $PWD/bashrc ~/.bashrc
-ln $PWD/bash_profile ~/.bash_profile
-ln $PWD/iterm2_shell_integration.bash ~/.iterm2_shell_integration.bash
+ln -s $PWD/bashrc ~/.bashrc
+ln -s $PWD/bash_profile ~/.bash_profile
+ln -s $PWD/iterm2_shell_integration.bash ~/.iterm2_shell_integration.bash
