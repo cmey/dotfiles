@@ -76,6 +76,8 @@ export PYTHONPATH=/Users/cmey/Code/GitHub/arrayfire-python:$PYTHONPATH
 complete -C aws_completer aws
 
 # BASH HISTORY
+# Displayed format.
+export HISTTIMEFORMAT="%d/%m/%y %T "
 # Increase history size.
 export HISTFILESIZE=10000000
 # Avoid duplicates.
@@ -115,3 +117,28 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 
 # FISH SHELL, see config in TODO: find config file name
 #fish
+
+# BEGIN 1cff6a31-bb8f-4879-a2b4-8a6b3a7e8ed4
+if [ -z "$PYENV_ROOT" ]; then
+  export PYENV_ROOT="${HOME}/.pyenv"
+fi
+export PATH="$PYENV_ROOT/bin:$PATH"
+if [ -x ~/.pyenv/bin/pyenv ]; then
+  eval "$(~/.pyenv/bin/pyenv init -)"
+  eval "$(~/.pyenv/bin/pyenv virtualenv-init -)"
+fi
+# END 1cff6a31-bb8f-4879-a2b4-8a6b3a7e8ed4
+# BEGIN 9530a7e0-34b4-4407-af18-9204a877295f
+export PATH=~/.rbenv/shims:$PATH
+# END 9530a7e0-34b4-4407-af18-9204a877295f
+# BEGIN d211d168-c177-41b2-812e-0a0dff6475a0
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+# END d211d168-c177-41b2-812e-0a0dff6475a0
+# BEGIN 77afbd10-e4d8-45ac-9877-9767f81c3bc0
+export BNI_QT_DIR="/Users/cmey/Qt/5.6"
+# END 77afbd10-e4d8-45ac-9877-9767f81c3bc0
+# BEGIN 9ff6e834-e8ac-4454-95a9-a6d3e2308296
+export BNI_LIBS_ROOT="/Users/cmey/software-libs"
+# END 9ff6e834-e8ac-4454-95a9-a6d3e2308296
