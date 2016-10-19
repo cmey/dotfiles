@@ -21,6 +21,7 @@ source $SETUP_DIR/brew.sh
 # Git
 brew install git git-lfs
 git lfs install --force
+git config --global rerere.enabled true
 
 # Powerline Meslo fonts
 git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
