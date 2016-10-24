@@ -19,6 +19,7 @@ source $SETUP_DIR/build-essentials.sh
 source $SETUP_DIR/brew.sh
 
 # Git
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit"
 brew install git git-lfs
 git lfs install --force
 git config --global rerere.enabled true
