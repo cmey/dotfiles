@@ -19,6 +19,9 @@ source $SETUP_DIR/build-essentials.sh
 source $SETUP_DIR/brew.sh
 
 # Git
+# git pullall  # pull and update submodules
+git config --global alias.pullall '!f(){ git pull "$@" && git submodule update --init --recursive; }; f'
+# git lg  # prettier git log
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit"
 brew install git git-lfs
 git lfs install --force
