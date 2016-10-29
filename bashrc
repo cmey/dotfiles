@@ -40,11 +40,8 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # JULIA
-#export PATH="$JULIAPATH/bin:$PATH"
-#export JULIADIR="/Applications/Julia-0.3.11.app/Contents/MacOS"
-#JULIAPATH='/Applications/Julia-0.3.7.app/Contents/Resources/julia'
-#alias julia=${JULIADIR}/Julia
-#alias Julia=julia
+export JULIAPATH='/Applications/Julia-0.5.app/Contents/Resources/julia/bin'
+export PATH="$JULIAPATH:$PATH"
 # Escher
 export PATH=~/.julia/v0.4/Escher/bin:$PATH
 
