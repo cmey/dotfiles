@@ -31,7 +31,7 @@ export LD_LIBRARY_PATH=/usr/local/lib:/opt/X11/lib:$LD_LIBRARY_PATH
 export PYOPENCL_CTX=':2' # [2] <pyopencl.Device 'GeForce GT 750M' on 'Apple' at 0x1022700>
 
 # PYTHON
-export PYTHONPATH="/usr/local/lib/python2.7:$PYTHONPATH"
+# export PYTHONPATH="/usr/local/lib/python2.7:$PYTHONPATH"
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export EDITOR=vim
 
@@ -63,11 +63,11 @@ export PATH=/Developer/NVIDIA/CUDA-7.0/bin:$PATH
 export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-7.0/lib:$DYLD_LIBRARY_PATH
 
 # ARRAYFIRE
-export DYLD_LIBRARY_PATH=/usr/local/Cellar/arrayfire/3.0.0/lib/:$DYLD_LIBRARY_PATH
 export AF_CUDA_DEFAULT_DEVICE=0
 export AF_OPENCL_DEFAULT_DEVICE=1
 export AF_DISABLE_GRAPHICS=1
-export PYTHONPATH=/Users/cmey/Code/GitHub/arrayfire-python:$PYTHONPATH
+# export DYLD_LIBRARY_PATH=/usr/local/Cellar/arrayfire/3.0.0/lib/:$DYLD_LIBRARY_PATH
+# export PYTHONPATH=/Users/cmey/Code/GitHub/arrayfire-python:$PYTHONPATH
 
 # AWS bash completion
 complete -C aws_completer aws
