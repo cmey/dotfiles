@@ -10,7 +10,7 @@ alias k='kill %%'
 alias t='py.test --fast --automated -n auto'
 alias g='googler -t y1 --lucky'  # time 1 year, open first hit
 alias orig="find . -name '*orig*'"
-
+alias pa='git pullall'
 alias pos='source ~/bin/env-poseidon-Butterfly.sh'
 # alias pos='eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"'
 alias py="source ~/bin/env-pyenv-standalone.sh"
