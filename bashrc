@@ -37,8 +37,9 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export EDITOR=vim
 
 # RUBY
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+eval "$(rbenv init -)"
 
 # JULIA
 export JULIAPATH='/Applications/Julia-0.5.app/Contents/Resources/julia/bin'
