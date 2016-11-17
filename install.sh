@@ -34,7 +34,8 @@ cd $SETUP_DIR
 # Bash
 brew install bash-completion bash-git-prompt
 
-# Install links (hard b/c some script fails on symlink)
+# Install links (sym) !(hard b/c some script fails on symlink)
 ln -s $PWD/bashrc ~/.bashrc
 ln -s $PWD/bash_profile ~/.bash_profile
+ln -s $PWD/pdbrc ~/.pdbrc
 ln -s $PWD/iterm2_shell_integration.bash ~/.iterm2_shell_integration.bash
