@@ -61,12 +61,33 @@ defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 # Disable the over-the-top focus ring animation
 defaults write NSGlobalDomain NSUseAnimatedFocusRing -bool false
 
+# opening and closing windows and popovers
+defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
+
 # Disable smooth scrolling
 # (Uncomment if you’re on an older Mac that messes up the animation)
-#defaults write NSGlobalDomain NSScrollAnimationEnabled -bool false
+defaults write NSGlobalDomain NSScrollAnimationEnabled -bool false
 
 # Increase window resize speed for Cocoa applications
+# showing and hiding sheets, resizing preference windows, zooming windows
+# float 0 doesn't work
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+# resizing windows before and after showing the version browser
+# also disabled by NSWindowResizeTime -float 0.001
+defaults write -g NSDocumentRevisionsWindowTransformAnimation -bool false
+
+# showing a toolbar or menu bar in full screen
+defaults write -g NSToolbarFullScreenAnimationDuration -float 0
+
+# scrolling column views
+defaults write -g NSBrowserColumnAnimationSpeedMultiplier -float 0
+
+# opening and closing Quick Look windows
+defaults write -g QLPanelAnimationDuration -float 0
+
+# rubberband scrolling (doesn't affect web views)
+defaults write -g NSScrollViewRubberbanding -bool false
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
