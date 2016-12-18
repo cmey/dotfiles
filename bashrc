@@ -7,6 +7,7 @@ alias dor="dir"
 alias dockerenv='eval $(docker-machine env default)'
 alias emacs='open -a /Applications/Emacs.app $1'
 alias find='gfind'  # find . ! -readable -prune -name anaconda
+alias grip='grip -b'  # markdown preview
 alias j='$(pyenv which jupyter) notebook'
 alias k='kill %%'
 alias t='py.test --fast --automated -n auto'
