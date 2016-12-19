@@ -1,5 +1,5 @@
 # BASH ALIASES
-alias bbh='pos && pushd $BNI_ROOT/../software  &&  git clean -ffdx  &&  pushd $BNI_ROOT  &&  rm -rf SDK-oldworking && mv -f SDK SDK-oldworking 2> /dev/null || true  &&  popd  &&  build-bni-software  &&  popd'
+alias bbh='pos && pushd $BNI_ROOT/../software  &&  git clean -ffdx  &&  pushd $BNI_ROOT  &&  rm -rf SDK-previous && mv -f SDK SDK-previous 2> /dev/null || true  &&  popd  &&  build-bni-software  &&  popd'
 alias ls="ls -aGh"  # F adds symbols at end of non simple files
 alias ll="ls -l"
 alias dir="ls"
