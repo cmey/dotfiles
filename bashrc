@@ -81,7 +81,7 @@ complete -C aws_completer aws
 # Displayed format.
 export HISTTIMEFORMAT="%d/%m/%y %T "
 # Increase history size.
-export HISTFILESIZE=10000000
+export HISTFILESIZE=100000000
 # Avoid duplicates.
 export HISTCONTROL=ignoredups:erasedups
 # Merged BASH HISTORY for multiple terminals.
