@@ -9,8 +9,8 @@ SETUP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Utils used later (messages, message color)
 source $SETUP_DIR/util.sh
 
-report "Making ~/bin" YELLOW
-mkdir -p ~/bin
+report "Making ~/bin/" YELLOW
+mkdir -p ~/bin/
 
 # Install essential build tools
 source $SETUP_DIR/build-essentials.sh
@@ -34,9 +34,18 @@ cd $SETUP_DIR
 # Bash
 brew install bash-completion bash-git-prompt
 
+# Vim
+report "Making ~/.vim/" YELLOW
+mkdir -p ~/.vim/
+mkdir -p ~/.vim/files/backup/
+mkdir -p ~/.vim/files/swap/
+mkdir -p ~/.vim/files/undo/
+mkdir -p ~/.vim/files/info/
+
 # Install links (sym)
 ln -s $PWD/bashrc ~/.bashrc
 ln -s $PWD/bash_profile ~/.bash_profile
+ln -s $PWD/vimrc ~/.vim/vimrc
 ln -s $PWD/pdbrc ~/.pdbrc
 ln -s $PWD/iterm2_shell_integration.bash ~/.iterm2_shell_integration.bash
 ln -s $PWD/custom.css ~/.jupyter/custom/custom.css  # dark Jupyter
