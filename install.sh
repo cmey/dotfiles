@@ -5,6 +5,7 @@ set -euo pipefail
 
 # Here
 SETUP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $SETUP_DIR
 
 # Utils used later (messages, message color)
 source $SETUP_DIR/util.sh
@@ -26,10 +27,10 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 brew install git git-lfs
 git lfs install --force
 git config --global rerere.enabled true
+git config --global core.excludesfile "$PWD/gitignore-global"
 
 # Powerline Meslo fonts
 git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
-cd $SETUP_DIR
 
 # Bash
 brew install bash-completion bash-git-prompt
