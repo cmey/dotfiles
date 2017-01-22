@@ -9,6 +9,7 @@ alias emacs='open -a /Applications/Emacs.app $1'
 alias find='gfind'  # find . ! -readable -prune -name anaconda
 alias grip='grip -b'  # markdown preview
 alias j='$(pyenv which jupyter) notebook'
+alias ju="julia -e 'using IJulia; IJulia.notebook()'"
 alias k='kill %%'
 alias t='py.test --fast --automated -n auto'
 alias g='googler -t y1 --lucky'  # time 1 year, open first hit
