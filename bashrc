@@ -7,7 +7,6 @@ alias ll="ls -l"
 alias dir="ls"
 alias dor="dir"
 alias dockerenv='eval $(docker-machine env default)'
-alias emacs='open -a /Applications/Emacs.app $1'
 alias find='gfind'  # find . ! -readable -prune -name anaconda
 alias grip='grip -b'  # markdown preview
 alias j='$(pyenv which jupyter) notebook'
