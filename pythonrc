@@ -1,0 +1,25 @@
+# vim: set ft=python :
+from __future__ import print_function
+
+try:
+    import numpy as np
+
+    def rand(shape):
+        return np.random.rand(*shape)
+except:
+    print("Could not import numpy package.")
+else:
+    print("Imported numpy package.")
+
+
+try:
+    import matplotlib.pyplot as plt
+
+    def show(img, show=True):
+        plt.imshow(abs(img))
+        if show:
+            plt.show()
+except:
+    print("Could not import matplotlib package.")
+else:
+    print("Imported matplotlib package.")
