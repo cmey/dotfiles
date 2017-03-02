@@ -15,10 +15,17 @@ else:
 try:
     import matplotlib.pyplot as plt
 
-    def show(img, show=True):
-        plt.imshow(abs(img))
-        if show:
-            plt.show()
+    def show(img, block=False, figure=None, title=None):
+      if figure is None:
+          f = plt.figure()
+      if title is not None:
+          plt.title(title)
+      plt.imshow(abs(img))
+      plt.colorbar()
+      if block:
+          plt.show()
+      return f
+      
 except:
     print("Could not import matplotlib package.")
 else:
