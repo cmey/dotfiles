@@ -102,15 +102,15 @@ export GREP_OPTIONS='--color=auto'
 export GIT_PS1_SHOWCOLORHINTS=true
 export GIT_PS1_SHOWDIRTYSTATE=  # true
 export GIT_PS1_SHOWUNTRACKEDFILES=  # true
-export GIT_PROMPT_ONLY_IN_REPO=1
-export GIT_PROMPT_FETCH_REMOTE_STATUS=0  # uncomment to avoid fetching remote status
-export GIT_PROMPT_SHOW_UNTRACKED_FILES=no  # can be no, normal or all; determines counting of untracked files
-export GIT_PROMPT_SHOW_CHANGED_FILES_COUNT=0 # uncomment to avoid printing the number of changed files
-export GIT_PROMPT_THEME=Solarized # use theme optimized for solarized color scheme
-source `brew --prefix`/etc/bash_completion.d/git-completion.bash
-source `brew --prefix`/etc/bash_completion.d/git-prompt.sh  # git one's
-if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
-    source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+if [ -f /usr/local/share/gitprompt.sh ]; then
+    export GIT_PROMPT_THEME=Solarized # use theme optimized for solarized color scheme
+    export GIT_PROMPT_ONLY_IN_REPO=1
+    export GIT_PROMPT_FETCH_REMOTE_STATUS=0  # uncomment to avoid fetching remote status
+    export GIT_PROMPT_SHOW_UNTRACKED_FILES=no  # can be no, normal or all; determines counting of untracked files
+    export GIT_PROMPT_SHOW_CHANGED_FILES_COUNT=0 # uncomment to avoid printing the number of changed files
+
+    . /usr/local/share/gitprompt.sh
 fi
 
 if type __git_ps1 &>/dev/null; then
