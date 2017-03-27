@@ -1,8 +1,8 @@
 # BASH ALIASES
-alias bbh='pos && pushd $BNI_ROOT/../software  &&  git clean -ffdx  &&  pushd $BNI_ROOT  &&  rm -rf SDK-previous && mv -f SDK SDK-previous 2> /dev/null || true  &&  popd  &&  build-bni-software  &&  popd'
+alias bbh='pos && pushd $BNI_ROOT/../software/host  &&  git clean -ffdx  &&  pushd $BNI_ROOT  &&  rm -rf SDK-previous && mv -f SDK SDK-previous 2> /dev/null || true  &&  popd  &&  build-bni-software  &&  popd'
 alias reqs="find . -name '*requirement*'"
 alias nextsdk='pushd $BNI_ROOT  &&  rm -rf SDK-previous && mv -f SDK SDK-previous 2> /dev/null || true  &&  popd'
-alias ls="ls -aGh"  # F adds symbols at end of non simple files
+#alias ls="ls -aGh"  # F adds symbols at end of non simple files
 alias ll="ls -l"
 alias dir="ls"
 alias dor="dir"
@@ -146,3 +146,15 @@ export BNI_QT_DIR="/Users/cmey/Qt/5.6"
 # BEGIN 9ff6e834-e8ac-4454-95a9-a6d3e2308296
 export BNI_LIBS_ROOT="/Users/cmey/software-libs"
 # END 9ff6e834-e8ac-4454-95a9-a6d3e2308296
+# BEGIN 13b0a590-d8aa-4f9b-8484-8ca5a4ad6973
+export PATH=$PATH:"/opt/cypress/yagarto-4.7.2/bin"
+# END 13b0a590-d8aa-4f9b-8484-8ca5a4ad6973
+# BEGIN 00c3272a-27ce-4af2-987d-ad7087eefe41
+export ARMGCC_INSTALL_PATH="/opt/cypress/yagarto-4.7.2"
+# END 00c3272a-27ce-4af2-987d-ad7087eefe41
+# BEGIN c2c6f514-5aa6-4d9e-808e-6960aa254b7b
+export ARMGCC_VERSION="4.7.2"
+# END c2c6f514-5aa6-4d9e-808e-6960aa254b7b
+# BEGIN 9e200d0e-416a-48c1-9ef0-f08f0db92d04
+export FX3_INSTALL_PATH="/opt/cypress/cyfx3sdk"
+# END 9e200d0e-416a-48c1-9ef0-f08f0db92d04
