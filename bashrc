@@ -38,6 +38,7 @@ export PYOPENCL_CTX=':2' # [2] <pyopencl.Device 'GeForce GT 750M' on 'Apple' at 
 
 # PYTHON
 # export PYTHONPATH="/usr/local/lib/python2.7:$PYTHONPATH"
+export PYTHONSTARTUP=~/.pythonrc.py
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export EDITOR=vim
 
