@@ -133,7 +133,8 @@ if [ -x ~/.pyenv/bin/pyenv ]; then
 fi
 # END 1cff6a31-bb8f-4879-a2b4-8a6b3a7e8ed4
 # BEGIN 9530a7e0-34b4-4407-af18-9204a877295f
-export PATH=~/.rbenv/shims:$PATH
+export PATH=~/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
 # END 9530a7e0-34b4-4407-af18-9204a877295f
 # BEGIN d211d168-c177-41b2-812e-0a0dff6475a0
 export LANG=en_US.UTF-8
