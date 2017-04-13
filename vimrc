@@ -61,3 +61,86 @@ set updatecount =100
 set undofile
 set undodir     =$HOME/.vim/files/undo/
 set viminfo     ='100,n$HOME/.vim/files/info/viminfo
+
+
+
+" Vundle
+set nocompatible              " be iMproved, required
+filetype off                  " required
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+" Keep Plugin commands between vundle#begin/end.
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" plugins on GitHub repo
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'christoomey/vim-sort-motion'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'rdnetto/YCM-Generator'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-obsession'
+Plugin 'dhruvasagar/vim-prosession' " deps on tpope/vim-obsession
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-surround'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'wincent/loupe'
+
+" git repos on your local machine (i.e. when working on your own plugin)
+" Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+" Plugin 'ascenator/L9', {'name': 'newL9'}
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+" filetype plugin on
+
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just
+" :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+
+
+" cmey changes:
+let mapleader=","
+set pastetoggle=<F3>    " press <F3> to toggle autoindent ("paste mode")
+" Better find and replace
+map <leader>fr :%s///g<left><left>
+map <leader>frl :s///g<left><left>
+set autoread    " autoreload files from disk
+au CursorHold * checktime   " trigger autoreload with keyboard
+" Vim's new hybrid line number mode
+set relativenumber
+set number
+" set mouse+=a    " avoid copy paste line numbers
+
+nnoremap <leader>n :exec &nu==&rnu? "se nu!" : "se rnu!"<CR>
+
+set updatetime=250  " git statuses
+let g:ycm_collect_identifiers_from_tags_files = 1   " YouCompleteMe use ctags
+" ctrp tweaks
+let g:ctrlp_regexp = 1
+" use ripgrep (rg) in ctrlp (faster)
+if executable('rg')
+    set grepprg=rg\ --color=never
+    let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+    let g:ctrlp_use_caching = 0
+endif
+
