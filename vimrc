@@ -90,6 +90,7 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'wincent/loupe'
+Plugin 'altercation/vim-colors-solarized'
 
 " git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'
@@ -143,4 +144,9 @@ if executable('rg')
     let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
     let g:ctrlp_use_caching = 0
 endif
+
+" solarized
+syntax enable
+set background=dark
+colorscheme solarized
 
