@@ -15,7 +15,7 @@ else:
 try:
     import matplotlib.pyplot as plt
 
-    def show(img, block=False, figure=None, title=None):
+    def show(img, block=True, figure=None, title=None):
       if figure is None:
           f = plt.figure()
       if title is not None:
