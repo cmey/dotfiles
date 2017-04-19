@@ -78,19 +78,22 @@ Plugin 'VundleVim/Vundle.vim'
 " plugins on GitHub repo
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'chrisbra/csv.vim'
 Plugin 'christoomey/vim-sort-motion'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-obsession'
-Plugin 'dhruvasagar/vim-prosession' " deps on tpope/vim-obsession
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'wincent/loupe'
 Plugin 'altercation/vim-colors-solarized'
+
+Plugin 'dhruvasagar/vim-prosession' " deps on tpope/vim-obsession
 
 " git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'
@@ -150,3 +153,5 @@ syntax enable
 set background=dark
 colorscheme solarized
 
+" csv.vim: auto format as table
+let g:csv_autocmd_arrange = 1
