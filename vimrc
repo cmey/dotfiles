@@ -76,12 +76,17 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " plugins on GitHub repo
+
+Plugin 'JuliaEditorSupport/julia-vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-bufferline'
 Plugin 'chrisbra/csv.vim'
 Plugin 'christoomey/vim-sort-motion'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rdnetto/YCM-Generator'
+Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-obsession'
@@ -89,9 +94,9 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'vim-airline/vim-airline'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'wincent/loupe'
-Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'dhruvasagar/vim-prosession' " deps on tpope/vim-obsession
 
@@ -133,9 +138,10 @@ au CursorHold * checktime   " trigger autoreload with keyboard
 " Vim's new hybrid line number mode
 set relativenumber
 set number
+nnoremap <leader>n :exec &nu==&rnu? "se nu!" : "se rnu!"<CR>
 " set mouse+=a    " avoid copy paste line numbers
 
-nnoremap <leader>n :exec &nu==&rnu? "se nu!" : "se rnu!"<CR>
+runtime macros/matchit.vim  " match parens, etc.
 
 set updatetime=250  " git statuses
 let g:ycm_collect_identifiers_from_tags_files = 1   " YouCompleteMe use ctags
