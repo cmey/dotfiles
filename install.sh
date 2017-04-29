@@ -37,7 +37,7 @@ git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
 brew install bash-completion bash-git-prompt
 
 # Utils
-brew install tree htop git git-lfs hub imagemagick pyenv
+brew install tree htop git git-lfs hub imagemagick
 
 # Vim
 report "Making ~/.vim/" YELLOW
