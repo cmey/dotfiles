@@ -85,6 +85,7 @@ Plugin 'bling/vim-bufferline'
 Plugin 'chrisbra/csv.vim'
 Plugin 'christoomey/vim-sort-motion'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'jpalardy/vim-slime'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-commentary'
@@ -129,6 +130,7 @@ filetype plugin indent on    " required
 
 " cmey changes:
 let mapleader=","
+set clipboard=unnamed   " yank to osx clipboard (needs macvim?)
 set pastetoggle=<F3>    " press <F3> to toggle autoindent ("paste mode")
 " Better find and replace
 map <leader>fr :%s///g<left><left>
@@ -158,6 +160,9 @@ endif
 syntax enable
 set background=dark
 colorscheme solarized
+
+" vim-slime: send to tmux (instead of the default: screen)
+let g:slime_target = "tmux"
 
 " csv.vim: auto format as table
 let g:csv_autocmd_arrange = 1
