@@ -144,6 +144,10 @@ set number
 nnoremap <leader>n :exec &nu==&rnu? "se nu!" : "se rnu!"<CR>
 " set mouse+=a    " avoid copy paste line numbers
 
+" highlight tabs and trailing spaces
+set encoding=utf-8
+set list listchars=tab:→\ ,trail:·
+
 runtime macros/matchit.vim  " match parens, etc.
 
 set updatetime=250  " git statuses
