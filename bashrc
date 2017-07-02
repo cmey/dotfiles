@@ -8,6 +8,8 @@ alias dir="ls"
 alias dor="dir"
 alias dockerenv='eval $(docker-machine env default)'
 alias find='gfind'  # find . ! -readable -prune -name anaconda
+
+alias got='git'
 alias grip='grip -b'  # markdown preview
 alias j='$(pyenv which jupyter) notebook'
 alias ju="julia -e 'using IJulia; IJulia.notebook()'"
