@@ -49,10 +49,12 @@ export EDITOR=vim
 eval "$(rbenv init -)"
 
 # JULIA
-export JULIAPATH='/Applications/Julia-0.5.app/Contents/Resources/julia/bin'
+export JULIAPATH='/Applications/Julia-0.6.app/Contents/Resources/julia/bin'
 export PATH="$JULIAPATH:$PATH"
 # Escher
 export PATH=~/.julia/v0.4/Escher/bin:$PATH
+# Parallelization with: Threads.@threads for i = 1:length(...)
+export JULIA_NUM_THREADS=4
 
 # BREW QT5
 #If you build your own software and it requires this formula, you'll need to add to your
