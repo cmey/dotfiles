@@ -19,7 +19,6 @@ alias g='googler -t y1 --lucky'  # time 1 year, open first hit
 alias orig="find . -name '*orig*'"
 alias p='git pullall'
 alias pos='source ~/bin/env-poseidon-Butterfly.sh'
-# alias pos='eval "$(pyenv init -)"; eval "$(pyenv virtualenv-init -)"'
 alias py="source ~/bin/env-pyenv-standalone.sh"
 alias i="cd /Users/cmey/Code/GitHub/ButterflyNetwork/poseidon/software/imaging/imaging; pos"
 alias ipy="ipython notebook"
@@ -27,7 +26,7 @@ alias ipy2="ipython2 notebook"
 alias ipy3="ipython3 notebook"
 alias cleanpyc="find . -iname '*.pyc' -exec rm -rf {} \;"
 
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="~/bin:$PATH"
 export PATH="~/Downloads/gcutil-1.8.3:~/Downloads/gsutil:$PATH"
 ### Added by the Heroku Toolbelt
@@ -41,7 +40,7 @@ export PYOPENCL_CTX=':2' # [2] <pyopencl.Device 'GeForce GT 750M' on 'Apple' at 
 # PYTHON
 # export PYTHONPATH="/usr/local/lib/python2.7:$PYTHONPATH"
 export PYTHONSTARTUP=~/.pythonrc.py
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+# if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 export EDITOR=vim
 
 # RUBY
@@ -86,7 +85,8 @@ complete -C aws_completer aws
 # Displayed format.
 export HISTTIMEFORMAT="%d/%m/%y %T "
 # Increase history size.
-export HISTFILESIZE=100000000
+export HISTSIZE=1000000
+export HISTFILESIZE=1000000
 # Avoid duplicates.
 export HISTCONTROL=ignoredups:erasedups
 # Merged BASH HISTORY for multiple terminals.
