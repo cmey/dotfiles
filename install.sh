@@ -53,6 +53,7 @@ ln -s $PWD/bashrc ~/.bashrc
 ln -s $PWD/bash_profile ~/.bash_profile
 ln -s $PWD/vimrc ~/.vim/vimrc
 ln -s $PWD/pdbrc ~/.pdbrc
+ln -s $PWD/juliarc.jl ~/.juliarc.jl
 ln -s $PWD/pythonrc.py ~/.pythonrc.py
 ln -s $PWD/iterm2_shell_integration.bash ~/.iterm2_shell_integration.bash
 ln -s $PWD/custom.css ~/.jupyter/custom/custom.css  # dark Jupyter
