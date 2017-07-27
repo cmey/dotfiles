@@ -97,6 +97,7 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'wincent/loupe'
 
@@ -171,6 +172,13 @@ let g:slime_target = "tmux"
 
 " csv.vim: auto format as table
 let g:csv_autocmd_arrange = 1
+
+" vim-airline
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
+" let g:airline_extensions = ['branch']
+" determine whether bufferline will overwrite customization variables
+let g:airline#extensions#bufferline#overwrite_variables = 1
 
 " syntastic config
 set statusline+=%#warningmsg#
