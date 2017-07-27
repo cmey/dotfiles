@@ -98,6 +98,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-latex/vim-latex'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'wincent/loupe'
 
@@ -172,6 +173,16 @@ let g:slime_target = "tmux"
 
 " csv.vim: auto format as table
 let g:csv_autocmd_arrange = 1
+
+" vim-latex
+" grep will sometimes skip displaying the file name if you
+" search in a singe file. This will confuse Latex-Suite. Set your grep
+" program to always generate a file-name.
+set grepprg=grep\ -nH\ $*
+" Starting with Vim 7, the filetype of empty .tex files defaults to
+" 'plaintex' instead of 'tex', which results in vim-latex not being
+" loaded. The following changes the default filetype back to 'tex':
+let g:tex_flavor='latex'
 
 " vim-airline
 let g:airline_theme='solarized'
