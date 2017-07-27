@@ -184,6 +184,9 @@ set grepprg=grep\ -nH\ $*
 " loaded. The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 
+" vim-bufferline
+let g:bufferline_echo = 0
+
 " vim-airline
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
