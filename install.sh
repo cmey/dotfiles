@@ -38,7 +38,7 @@ git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
 brew install bash-completion bash-git-prompt
 
 # Utils
-brew install htop imagemagick tmux tree
+brew install vim htop imagemagick tmux tree
 
 # Vim
 report "Making ~/.vim/" YELLOW
