@@ -153,7 +153,11 @@ set list listchars=tab:→\ ,trail:·
 runtime macros/matchit.vim  " match parens, etc.
 
 set updatetime=250  " git statuses
+
+" YouCompleteMe
 let g:ycm_collect_identifiers_from_tags_files = 1   " YouCompleteMe use ctags
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'  " default compile flags
+
 " ctrp tweaks
 let g:ctrlp_regexp = 1
 " use ripgrep (rg) in ctrlp (faster)
