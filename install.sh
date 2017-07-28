@@ -19,15 +19,15 @@ source $SETUP_DIR/build-essentials.sh
 # Install Homebrew if needed
 source $SETUP_DIR/brew.sh
 
-# Git
+# Git (install & configure)
+brew install git git-lfs hub
+git lfs install --force
 # git pullall  # pull and update submodules
 git config --global alias.pullall '!f(){ git pull "$@" && git submodule update --init --recursive; }; f'
 # git lg  # prettier git log
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit"
 git config --global color.ui auto
 git config --global fetch.prune true  # prune deleted remotes automatically on each pull or fetch
-brew install git git-lfs hub
-git lfs install --force
 git config --global rerere.enabled true
 git config --global core.excludesfile "$PWD/gitignore-global"
 
@@ -38,7 +38,7 @@ git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
 brew install bash-completion bash-git-prompt
 
 # Utils
-brew install git git-lfs htop hub imagemagick tmux tree
+brew install htop imagemagick tmux tree
 
 # Vim
 report "Making ~/.vim/" YELLOW
