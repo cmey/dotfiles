@@ -40,7 +40,7 @@ brew install bash-completion bash-git-prompt
 # Utils
 brew install vim htop imagemagick tmux tree
 
-# Vim
+# Vim folders
 report "Making ~/.vim/" YELLOW
 mkdir -p ~/.vim/
 mkdir -p ~/.vim/files/backup/
@@ -57,3 +57,7 @@ ln -s $PWD/juliarc.jl ~/.juliarc.jl
 ln -s $PWD/pythonrc.py ~/.pythonrc.py
 ln -s $PWD/iterm2_shell_integration.bash ~/.iterm2_shell_integration.bash
 ln -s $PWD/custom.css ~/.jupyter/custom/custom.css  # dark Jupyter
+
+# Vim setup
+vim -c PluginInstall  # Install vim plugins (configured in vimrc)
+cd ~/.vim/bundle/YouCompleteMe && python install.py --clang-completer
