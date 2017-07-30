@@ -163,7 +163,7 @@ let g:ycm_collect_identifiers_from_tags_files = 1   " YouCompleteMe use ctags
 let g:ctrlp_regexp = 1
 " use ripgrep (rg) in ctrlp (faster)
 if executable('rg')
-    set grepprg=rg\ --color=never
+    set grepprg=rg\ --color=never\ -nH\ $*
     let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
     let g:ctrlp_use_caching = 0
 endif
@@ -183,7 +183,7 @@ let g:csv_autocmd_arrange = 1
 " grep will sometimes skip displaying the file name if you
 " search in a singe file. This will confuse Latex-Suite. Set your grep
 " program to always generate a file-name.
-set grepprg=grep\ -nH\ $*
+" set grepprg=grep\ -nH\ $*  " already set grepprg above!
 " Starting with Vim 7, the filetype of empty .tex files defaults to
 " 'plaintex' instead of 'tex', which results in vim-latex not being
 " loaded. The following changes the default filetype back to 'tex':
