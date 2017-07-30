@@ -38,7 +38,10 @@ git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
 brew install bash-completion bash-git-prompt
 
 # Utils
-brew install vim htop imagemagick tmux tree
+brew install fzf htop imagemagick tmux tree vim
+
+# fzf
+/usr/local/opt/fzf/install  # install fzf bash extensions (modifies bash history feature w/ Ctrl-R)
 
 # Vim folders
 report "Making ~/.vim/" YELLOW
