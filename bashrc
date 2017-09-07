@@ -1,3 +1,13 @@
+# BEGIN fbf033cf-0bd8-4b62-bf8a-1a490c72108f
+export PATH=~/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
+# END fbf033cf-0bd8-4b62-bf8a-1a490c72108f
+# BEGIN 0120fc47-8faa-46bd-99ab-da05b504858e
+export PATH=$PATH:"/opt/cypress/yagarto-4.7.2/bin"
+export ARMGCC_INSTALL_PATH="/opt/cypress/yagarto-4.7.2"
+export ARMGCC_VERSION="4.7.2"
+export FX3_INSTALL_PATH="/opt/cypress/cyfx3sdk"
+# END 0120fc47-8faa-46bd-99ab-da05b504858e
 # BASH ALIASES
 alias bbh='pos && pushd $BNI_ROOT/../software/host  &&  git clean -ffdx  &&  pushd $BNI_ROOT  &&  rm -rf SDK-previous && mv -f SDK SDK-previous 2> /dev/null || true  &&  popd  &&  build-bni-software  &&  popd'
 alias reqs="find . -name '*requirement*'"
@@ -136,10 +146,6 @@ if [ -x ~/.pyenv/bin/pyenv ]; then
   eval "$(~/.pyenv/bin/pyenv virtualenv-init -)"
 fi
 # END 1cff6a31-bb8f-4879-a2b4-8a6b3a7e8ed4
-# BEGIN 9530a7e0-34b4-4407-af18-9204a877295f
-export PATH=~/.rbenv/bin:$PATH
-eval "$(rbenv init -)"
-# END 9530a7e0-34b4-4407-af18-9204a877295f
 # BEGIN d211d168-c177-41b2-812e-0a0dff6475a0
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
@@ -151,15 +157,9 @@ export BNI_QT_DIR="/Users/cmey/Qt/5.6"
 # BEGIN 9ff6e834-e8ac-4454-95a9-a6d3e2308296
 export BNI_LIBS_ROOT="/Users/cmey/software-libs"
 # END 9ff6e834-e8ac-4454-95a9-a6d3e2308296
-# BEGIN 13b0a590-d8aa-4f9b-8484-8ca5a4ad6973
-export PATH=$PATH:"/opt/cypress/yagarto-4.7.2/bin"
-# END 13b0a590-d8aa-4f9b-8484-8ca5a4ad6973
-# BEGIN 00c3272a-27ce-4af2-987d-ad7087eefe41
-export ARMGCC_INSTALL_PATH="/opt/cypress/yagarto-4.7.2"
-# END 00c3272a-27ce-4af2-987d-ad7087eefe41
-# BEGIN c2c6f514-5aa6-4d9e-808e-6960aa254b7b
-export ARMGCC_VERSION="4.7.2"
-# END c2c6f514-5aa6-4d9e-808e-6960aa254b7b
-# BEGIN 9e200d0e-416a-48c1-9ef0-f08f0db92d04
-export FX3_INSTALL_PATH="/opt/cypress/cyfx3sdk"
-# END 9e200d0e-416a-48c1-9ef0-f08f0db92d04
+
+PATH="/Users/cmey/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/Users/cmey/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/cmey/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/Users/cmey/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/cmey/perl5"; export PERL_MM_OPT;
