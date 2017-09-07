@@ -8,6 +8,9 @@ export ARMGCC_INSTALL_PATH="/opt/cypress/yagarto-4.7.2"
 export ARMGCC_VERSION="4.7.2"
 export FX3_INSTALL_PATH="/opt/cypress/cyfx3sdk"
 # END 0120fc47-8faa-46bd-99ab-da05b504858e
+
+export EDITOR=vim
+
 # BASH ALIASES
 alias bbh='pos && pushd $BNI_ROOT/../software/host  &&  git clean -ffdx  &&  pushd $BNI_ROOT  &&  rm -rf SDK-previous && mv -f SDK SDK-previous 2> /dev/null || true  &&  popd  &&  build-bni-software  &&  popd'
 alias reqs="find . -name '*requirement*'"
