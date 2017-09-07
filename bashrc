@@ -114,7 +114,6 @@ if [ -f /usr/local/share/gitprompt.sh ]; then
     export GIT_PROMPT_FETCH_REMOTE_STATUS=0  # uncomment to avoid fetching remote status
     export GIT_PROMPT_SHOW_UNTRACKED_FILES=no  # can be no, normal or all; determines counting of untracked files
     export GIT_PROMPT_SHOW_CHANGED_FILES_COUNT=0 # uncomment to avoid printing the number of changed files
-
     . /usr/local/share/gitprompt.sh
 fi
 
