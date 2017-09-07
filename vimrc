@@ -98,6 +98,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'wincent/loupe'
 
 Plugin 'dhruvasagar/vim-prosession' " deps on tpope/vim-obsession
+Plugin 'gregsexton/gitv' " deps on tpope/vim-fugitive
 
 " git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'
