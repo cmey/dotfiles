@@ -144,6 +144,10 @@ set clipboard=unnamed   " yank to osx clipboard (needs macvim?)
 set pastetoggle=<F3>    " press <F3> to toggle autoindent ("paste mode")
 set autoread    " autoreload files from disk
 au CursorHold * checktime   " trigger autoreload with keyboard
+
+" Detect *.md files as markdown (instead of Modula)
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
 " Vim's new hybrid line number mode
 set relativenumber
 set number
