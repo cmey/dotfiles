@@ -83,6 +83,7 @@ Plugin 'christoomey/vim-sort-motion'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jpalardy/vim-slime'
 Plugin 'jreybert/vimagit'
+Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'majutsushi/tagbar'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'scrooloose/nerdtree'
@@ -147,6 +148,11 @@ au CursorHold * checktime   " trigger autoreload with keyboard
 
 " Detect *.md files as markdown (instead of Modula)
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+" Use github flavored markdown by default
+augroup markdown
+    au!
+    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+augroup END
 
 " Vim's new hybrid line number mode
 set relativenumber
