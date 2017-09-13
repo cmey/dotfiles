@@ -81,6 +81,7 @@ Plugin 'bling/vim-bufferline'
 Plugin 'chrisbra/csv.vim'
 Plugin 'christoomey/vim-sort-motion'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'janko-m/vim-test'
 Plugin 'jpalardy/vim-slime'
 Plugin 'jreybert/vimagit'
 Plugin 'jtratner/vim-flavored-markdown'
@@ -225,7 +226,14 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_python_pylint_post_args="--max-line-length=100"
 let g:syntastic_python_flake8_post_args="--max-line-length=100"
 
-" Mappings configuration
+" vim-test
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+
+" Other mappings configuration
 let mapleader=","
 map <C-n> :NERDTreeToggle<CR>
 map <C-m> :TagbarToggle<CR>
