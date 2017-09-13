@@ -85,7 +85,9 @@ Plugin 'janko-m/vim-test'
 Plugin 'jpalardy/vim-slime'
 Plugin 'jreybert/vimagit'
 Plugin 'jtratner/vim-flavored-markdown'
+Plugin 'junegunn/fzf'
 Plugin 'majutsushi/tagbar'
+Plugin 'pbogut/fzf-mru.vim'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-commentary'
@@ -182,6 +184,9 @@ if executable('rg')
     let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
     let g:ctrlp_use_caching = 0
 endif
+
+" fzf
+set rtp+=/usr/local/opt/fzf
 
 " solarized
 syntax enable
