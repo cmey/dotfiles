@@ -140,12 +140,8 @@ if get(g:, 'elite_mode')
     nnoremap <Right> :vertical resize -2<CR>
 endif
 
-let mapleader=","
 set clipboard=unnamed   " yank to osx clipboard (needs macvim?)
 set pastetoggle=<F3>    " press <F3> to toggle autoindent ("paste mode")
-" Better find and replace
-map <leader>fr :%s///g<left><left>
-map <leader>frl :s///g<left><left>
 set autoread    " autoreload files from disk
 au CursorHold * checktime   " trigger autoreload with keyboard
 " Vim's new hybrid line number mode
@@ -218,3 +214,11 @@ let g:syntastic_aggregate_errors = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_pylint_post_args="--max-line-length=100"
 let g:syntastic_python_flake8_post_args="--max-line-length=100"
+
+" Mappings configuration
+let mapleader=","
+map <C-n> :NERDTreeToggle<CR>
+map <C-m> :TagbarToggle<CR>
+" Better find and replace
+map <leader>fr :%s///g<left><left>
+map <leader>frl :s///g<left><left>
