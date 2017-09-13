@@ -128,6 +128,16 @@ filetype plugin indent on    " required
 
 
 " cmey changes:
+let elite_mode=1
+
+" Disable arrow movement, resize splits instead.
+if get(g:, 'elite_mode')
+    nnoremap <Up>    :resize +2<CR>
+    nnoremap <Down>  :resize -2<CR>
+    nnoremap <Left>  :vertical resize +2<CR>
+    nnoremap <Right> :vertical resize -2<CR>
+endif
+
 let mapleader=","
 set clipboard=unnamed   " yank to osx clipboard (needs macvim?)
 set pastetoggle=<F3>    " press <F3> to toggle autoindent ("paste mode")
