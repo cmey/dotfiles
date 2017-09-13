@@ -73,6 +73,7 @@ Plugin 'VundleVim/Vundle.vim'
 " plugins on GitHub repo
 
 Plugin 'JuliaEditorSupport/julia-vim'
+Plugin 'Townk/vim-autoclose'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
