@@ -240,6 +240,7 @@ nmap <silent> <leader>g :TestVisit<CR>
 
 " Other mappings configuration
 let mapleader=","
+map <leader>f :echo @%<CR>
 map <C-n> :NERDTreeToggle<CR>
 map <C-m> :TagbarToggle<CR>
 " Better find and replace
