@@ -59,76 +59,59 @@ set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 
 
 
-" Vundle
-set nocompatible              " be iMproved, required
-filetype off                  " required
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-" Keep Plugin commands between vundle#begin/end.
-call vundle#begin()
+" vim-plug plugin maganer
+" Install vim-plug
+if empty(glob("~/.vim/autoload/plug.vim"))
+    execute '!curl -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+endif
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" Keep Plug commands between plug#begin/end.
+call plug#begin('~/.vim/plugged')
+
+function! BuildYCM(info)
+  if a:info.status == 'installed' || a:info.force
+    !./install.sh
+  endif
+endfunction
 
 " plugins on GitHub repo
 
-Plugin 'JuliaEditorSupport/julia-vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-bufferline'
-Plugin 'chrisbra/csv.vim'
-Plugin 'christoomey/vim-sort-motion'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'janko-m/vim-test'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'jpalardy/vim-slime'
-Plugin 'jreybert/vimagit'
-Plugin 'jtratner/vim-flavored-markdown'
-Plugin 'junegunn/fzf'
-Plugin 'majutsushi/tagbar'
-Plugin 'pbogut/fzf-mru.vim'
-Plugin 'rdnetto/YCM-Generator'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-obsession'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-latex/vim-latex'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'wincent/loupe'
+Plug 'JuliaEditorSupport/julia-vim'
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+Plug 'airblade/vim-gitgutter'
+Plug 'altercation/vim-colors-solarized'
+Plug 'bling/vim-bufferline'
+Plug 'chrisbra/csv.vim'
+Plug 'christoomey/vim-sort-motion'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'janko-m/vim-test'
+Plug 'jiangmiao/auto-pairs'
+Plug 'jpalardy/vim-slime'
+Plug 'jreybert/vimagit'
+Plug 'jtratner/vim-flavored-markdown', { 'for': 'markdown'}
+Plug 'junegunn/fzf'
+Plug 'majutsushi/tagbar'
+Plug 'pbogut/fzf-mru.vim'
+Plug 'rdnetto/YCM-Generator'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-obsession'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-latex/vim-latex'
+Plug 'vim-syntastic/syntastic'
+Plug 'wincent/loupe'
 
-Plugin 'dhruvasagar/vim-prosession' " deps on tpope/vim-obsession
-Plugin 'gregsexton/gitv' " deps on tpope/vim-fugitive
-
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
+Plug 'dhruvasagar/vim-prosession' " deps on tpope/vim-obsession
+Plug 'gregsexton/gitv' " deps on tpope/vim-fugitive
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-" filetype plugin on
-
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just
-" :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
+call plug#end()
 " Put your non-Plugin stuff after this line
 
 
