@@ -117,6 +117,7 @@ call plug#end()
 
 
 " cmey changes:
+let mapleader=","
 let elite_mode=1
 
 " Disable arrow movement, resize splits instead.
@@ -164,7 +165,7 @@ set rtp+=/usr/local/opt/fzf
 
 " fzf-mru
 nnoremap <c-p> :FZFMru<cr>
-noremap <c-p> :FZFMru<cr>
+nnoremap <leader>p :FZF<cr>
 
 " solarized
 syntax enable
@@ -217,7 +218,6 @@ nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
 " Other mappings configuration
-let mapleader=","
 map <leader>f :echo @%<CR>  " print current file name
 map <C-n> :NERDTreeToggle<CR>
 map <C-m> :TagbarToggle<CR>
