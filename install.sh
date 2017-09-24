@@ -38,7 +38,7 @@ git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
 brew install bash-completion bash-git-prompt
 
 # Utils
-brew install ctags fzf htop imagemagick tmux tree vim
+brew install ctags fzf htop imagemagick ripgrep tmux tree vim
 
 # fzf
 /usr/local/opt/fzf/install  # install fzf bash extensions (modifies bash history feature w/ Ctrl-R)
