@@ -11,6 +11,9 @@ export FX3_INSTALL_PATH="/opt/cypress/cyfx3sdk"
 
 export EDITOR=vim
 
+# tell fzf to use ripgrep
+export FZF_DEFAULT_COMMAND='rg --files --hidden --smartcase --glob "!.git/*"'
+
 # BASH ALIASES
 alias bbh='pos && pushd $BNI_ROOT/../software/host  &&  git clean -ffdx  &&  pushd $BNI_ROOT  &&  rm -rf SDK-previous && mv -f SDK SDK-previous 2> /dev/null || true  &&  popd  &&  build-bni-software  &&  popd'
 alias reqs="find . -name '*requirement*'"
