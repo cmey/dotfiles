@@ -12,7 +12,7 @@ export FX3_INSTALL_PATH="/opt/cypress/cyfx3sdk"
 export EDITOR=vim
 
 # tell fzf to use ripgrep
-export FZF_DEFAULT_COMMAND='rg --files --hidden --smartcase --glob "!.git/*"'
+export FZF_DEFAULT_COMMAND="rg --files --hidden --smart-case --glob '!.git/*'"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # BASH ALIASES
