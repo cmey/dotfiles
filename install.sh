@@ -50,6 +50,7 @@ mkdir -p ~/.vim/files/backup/
 mkdir -p ~/.vim/files/swap/
 mkdir -p ~/.vim/files/undo/
 mkdir -p ~/.vim/files/info/
+mkdir -p ~/.vim/autoload
 
 # Install links (sym)
 ln -s $PWD/bashrc ~/.bashrc
@@ -62,5 +63,4 @@ ln -s $PWD/iterm2_shell_integration.bash ~/.iterm2_shell_integration.bash
 ln -s $PWD/custom.css ~/.jupyter/custom/custom.css  # dark Jupyter
 
 # Vim setup
-vim -c PluginInstall  # Install vim plugins (configured in vimrc)
-cd ~/.vim/bundle/YouCompleteMe && python install.py --clang-completer
+vim -c PlugInstall  # Install vim plugins (configured in vimrc)
