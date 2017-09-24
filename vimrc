@@ -83,13 +83,12 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'bling/vim-bufferline'
 Plug 'chrisbra/csv.vim'
 Plug 'christoomey/vim-sort-motion'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'janko-m/vim-test'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jpalardy/vim-slime'
 Plug 'jreybert/vimagit'
 Plug 'jtratner/vim-flavored-markdown', { 'for': 'markdown'}
-Plug 'junegunn/fzf'
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'
 Plug 'pbogut/fzf-mru.vim'
 Plug 'rdnetto/YCM-Generator'
@@ -159,17 +158,12 @@ let g:ycm_python_binary_path = 'python'  " use python binary from virtual env fo
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'  " fallback default compile flags
 let g:ycm_collect_identifiers_from_tags_files = 1   " YouCompleteMe use ctags
 
-" ctrp tweaks
-let g:ctrlp_regexp = 1
-" use ripgrep (rg) in ctrlp (faster)
-if executable('rg')
-    set grepprg=rg\ --color=never\ -nH\ $*
-    let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
-    let g:ctrlp_use_caching = 0
-endif
-
 " fzf
 set rtp+=/usr/local/opt/fzf
+
+" fzf-mru
+nnoremap <c-p> :FZFMru<cr>
+noremap <c-p> :FZFMru<cr>
 
 " solarized
 syntax enable
