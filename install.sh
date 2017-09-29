@@ -50,14 +50,14 @@ mkdir -p ~/.vim/files/info/
 mkdir -p ~/.vim/autoload
 
 # Install links (sym)
-ln -s $PWD/bashrc ~/.bashrc
-ln -s $PWD/bash_profile ~/.bash_profile
-ln -s $PWD/vimrc ~/.vim/vimrc
-ln -s $PWD/pdbrc ~/.pdbrc
-ln -s $PWD/juliarc.jl ~/.juliarc.jl
-ln -s $PWD/pythonrc.py ~/.pythonrc.py
-ln -s $PWD/iterm2_shell_integration.bash ~/.iterm2_shell_integration.bash
-ln -s $PWD/custom.css ~/.jupyter/custom/custom.css  # dark Jupyter
+ln -sf $PWD/bashrc ~/.bashrc
+ln -sf $PWD/bash_profile ~/.bash_profile
+ln -sf $PWD/vimrc ~/.vim/vimrc
+ln -sf $PWD/pdbrc ~/.pdbrc
+ln -sf $PWD/juliarc.jl ~/.juliarc.jl
+ln -sf $PWD/pythonrc.py ~/.pythonrc.py
+ln -sf $PWD/iterm2_shell_integration.bash ~/.iterm2_shell_integration.bash
+#ln -sf $PWD/custom.css ~/.jupyter/custom/custom.css  # dark Jupyter
 
 # fzf setup
 /usr/local/opt/fzf/install  # install fzf bash extensions (modifies bash history feature w/ Ctrl-R)
