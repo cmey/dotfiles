@@ -21,6 +21,9 @@ source $SETUP_DIR/brew.sh
 
 # Git (install & configure)
 brew install git git-lfs hub
+git config --global user.name "Christophe Meyer"
+git config --global user.email cmeyer@butterflynetinc.com
+
 git lfs install --force
 # git pullall  # pull and update submodules
 git config --global alias.pullall '!f(){ git pull "$@" && git submodule update --init --recursive; }; f'
