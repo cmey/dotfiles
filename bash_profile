@@ -9,3 +9,5 @@
 # BEGIN b0f03bf4-ba27-4d31-a681-949c39de9b64
 source ~/.bashrc
 # END b0f03bf4-ba27-4d31-a681-949c39de9b64
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"

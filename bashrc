@@ -138,8 +138,6 @@ if type __git_ps1 &>/dev/null; then
     export PS1="\h:\W\$(__git_ps1) $ "
 fi
 
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-
 # TEX
 export PATH="/usr/local/opt/texinfo/bin:$PATH"
 
