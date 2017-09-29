@@ -41,7 +41,8 @@ git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
 brew install bash-completion bash-git-prompt
 
 # Utils
-brew install ctags fzf htop imagemagick ripgrep tmux tree vim
+brew install cheat ctags fzf htop imagemagick mas ripgrep tmux tree vim
+brew cask install dropbox spectacle
 
 # Vim folders
 report "Making ~/.vim/" YELLOW
