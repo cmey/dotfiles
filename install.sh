@@ -40,9 +40,6 @@ brew install bash-completion bash-git-prompt
 # Utils
 brew install ctags fzf htop imagemagick ripgrep tmux tree vim
 
-# fzf
-/usr/local/opt/fzf/install  # install fzf bash extensions (modifies bash history feature w/ Ctrl-R)
-
 # Vim folders
 report "Making ~/.vim/" YELLOW
 mkdir -p ~/.vim/
@@ -61,6 +58,9 @@ ln -s $PWD/juliarc.jl ~/.juliarc.jl
 ln -s $PWD/pythonrc.py ~/.pythonrc.py
 ln -s $PWD/iterm2_shell_integration.bash ~/.iterm2_shell_integration.bash
 ln -s $PWD/custom.css ~/.jupyter/custom/custom.css  # dark Jupyter
+
+# fzf setup
+/usr/local/opt/fzf/install  # install fzf bash extensions (modifies bash history feature w/ Ctrl-R)
 
 # Vim setup
 vim -c PlugInstall  # Install vim plugins (configured in vimrc)
