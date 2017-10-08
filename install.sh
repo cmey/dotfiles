@@ -56,6 +56,7 @@ mkdir -p ~/.vim/autoload
 # Install links (sym)
 ln -sf $PWD/bashrc ~/.bashrc
 ln -sf $PWD/bash_profile ~/.bash_profile
+ln -sf $PWD/env-butterfly.sh ~/bin/
 ln -sf $PWD/vimrc ~/.vim/vimrc
 ln -sf $PWD/pdbrc ~/.pdbrc
 ln -sf $PWD/juliarc.jl ~/.juliarc.jl
