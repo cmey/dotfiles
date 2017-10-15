@@ -23,6 +23,7 @@ source $SETUP_DIR/brew.sh
 brew install git git-lfs hub
 git config --global user.name "Christophe Meyer"
 git config --global user.email cmeyer@butterflynetinc.com
+git config --global push.default current  # auto set upstream when pushing a new branch
 
 git lfs install --force
 # git pullall  # pull and update submodules
