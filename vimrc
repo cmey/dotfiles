@@ -164,8 +164,8 @@ let g:ycm_collect_identifiers_from_tags_files = 1   " YouCompleteMe use ctags
 set rtp+=/usr/local/opt/fzf
 
 " fzf-mru
-nnoremap <c-p> :FZFMru<cr>
-nnoremap <leader>p :FZF<cr>
+nnoremap <c-p> :FZF<cr>
+nnoremap <leader>p :FZFMru<cr>
 
 " solarized
 syntax enable
