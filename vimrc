@@ -81,6 +81,7 @@ Plug 'JuliaEditorSupport/julia-vim'
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
+Plug 'blueyed/vim-diminactive'
 Plug 'bling/vim-bufferline'
 Plug 'chrisbra/csv.vim'
 Plug 'christoomey/vim-sort-motion'
