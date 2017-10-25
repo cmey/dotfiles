@@ -45,8 +45,14 @@ brew install bash-completion bash-git-prompt
 # Utils
 brew install gcc
 brew link gcc  # not linked by default, r needs it
-brew install cheat ctags findutils fzf htop imagemagick mas mplayer postgresql r ripgrep tmux tree vim
+brew install bash-completion cheat ctags findutils fzf htop imagemagick mas mplayer postgresql r ripgrep tmux tree vim
 brew cask install  angry-ip-scanner dash disk-inventory-x docker dropbox dropbox-encore evernote hex-fiend iterm2 julia meld pycharm-ce rescuetime rstudio skype slack spectacle transmission vlc zotero
+
+# Install extra bash completions
+# Docker
+ln -s /Applications/Docker.app/Contents/Resources/etc/docker.bash-completion /usr/local/etc/bash_completion.d/docker
+ln -s /Applications/Docker.app/Contents/Resources/etc/docker-machine.bash-completion /usr/local/etc/bash_completion.d/docker-machine
+ln -s /Applications/Docker.app/Contents/Resources/etc/docker-compose.bash-completion /usr/local/etc/bash_completion.d/docker-compose
 
 # Vim folders
 report "Making ~/.vim/" YELLOW
