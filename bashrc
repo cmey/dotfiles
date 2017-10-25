@@ -45,20 +45,14 @@ alias cleanpyc="find . -iname '*.pyc' -exec rm -rf {} \;"
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
 export PATH="~/bin:$PATH"
 export PATH="~/Downloads/gcutil-1.8.3:~/Downloads/gsutil:$PATH"
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-export DYLD_LIBRARY_PATH=.
 export LD_LIBRARY_PATH=/usr/local/lib:/opt/X11/lib:$LD_LIBRARY_PATH
 
 # OPENCL
-export PYOPENCL_CTX=':2' # [2] <pyopencl.Device 'GeForce GT 750M' on 'Apple' at 0x1022700>
+# export PYOPENCL_CTX=':2' # [2] <pyopencl.Device 'GeForce GT 750M' on 'Apple' at 0x1022700>
 
 # PYTHON
-# export PYTHONPATH="/usr/local/lib/python2.7:$PYTHONPATH"
 export PYTHONSTARTUP=~/.pythonrc.py
-export PATH="/Users/cmey/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# See also pyenv below
 
 # RUBY
 # export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
@@ -80,20 +74,13 @@ export JULIA_NUM_THREADS=4
 #export CPPFLAGS=-I/usr/local/opt/qt5/include
 
 # QWT
-export QWT_ROOTDIR=/usr/local/qwt-6.1.2
+#export QWT_ROOTDIR=/usr/local/qwt-6.1.2
 #export QWT_ROOTDIR=/usr/local/Cellar/qwt/6.1.2 # from homebrew
 
-# MATLAB
-export PATH=$PATH:/Applications/MATLAB_R2015a.app/bin
-
-# CUDA
-export PATH=/Developer/NVIDIA/CUDA-7.0/bin:$PATH
-export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-7.0/lib:$DYLD_LIBRARY_PATH
-
 # ARRAYFIRE
-export AF_CUDA_DEFAULT_DEVICE=0
-export AF_OPENCL_DEFAULT_DEVICE=1
-export AF_DISABLE_GRAPHICS=1
+# export AF_CUDA_DEFAULT_DEVICE=0
+# export AF_OPENCL_DEFAULT_DEVICE=1
+# export AF_DISABLE_GRAPHICS=1
 # export DYLD_LIBRARY_PATH=/usr/local/Cellar/arrayfire/3.0.0/lib/:$DYLD_LIBRARY_PATH
 # export PYTHONPATH=/Users/cmey/Code/GitHub/arrayfire-python:$PYTHONPATH
 
