@@ -70,7 +70,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 function! BuildYCM(info)
-  if a:info.status == 'installed' || a:info.force
+  if a:info.status == 'installed' || a:info.status == 'updated' || a:info.force
     !./install.py
   endif
 endfunction
