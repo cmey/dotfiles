@@ -45,7 +45,7 @@ brew install bash-completion bash-git-prompt
 # Utils
 brew install gcc
 brew link gcc  # not linked by default, r needs it
-brew install bash-completion cheat ctags findutils fzf htop imagemagick mas mplayer postgresql r ripgrep tmux tree
+brew install bash-completion cheat ctags findutils fzf gpg htop imagemagick mas mplayer postgresql r ripgrep tmux tree
 brew install vim --with-lua
 brew cask install  angry-ip-scanner dash disk-inventory-x docker dropbox dropbox-encore evernote hex-fiend iterm2 julia meld pycharm-ce rescuetime rstudio skype slack spectacle transmission vlc zotero
 
