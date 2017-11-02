@@ -23,6 +23,9 @@ source $SETUP_DIR/brew.sh
 brew install git git-lfs hub
 git config --global user.name "Christophe Meyer"
 git config --global user.email cmeyer@butterflynetinc.com
+git config --global commit.gpgsign true
+git config --global user.signingkey 04D468907A831621
+#git config user.signingkey 1E8DF5A73DEA3CB7  # cmeyer@butterflynetinc.com
 git config --global credential.helper osxkeychain
 git config --global push.default current  # auto set upstream when pushing a new branch
 
