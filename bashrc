@@ -42,7 +42,11 @@ alias ipy2="ipython2 notebook"
 alias ipy3="ipython3 notebook"
 alias cleanpyc="find . -iname '*.pyc' -exec rm -rf {} \;"
 
+# MacPorts
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Homebrew
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
+
 export PATH="~/bin:$PATH"
 export PATH="~/Downloads/gcutil-1.8.3:~/Downloads/gsutil:$PATH"
 export LD_LIBRARY_PATH=/usr/local/lib:/opt/X11/lib:$LD_LIBRARY_PATH
