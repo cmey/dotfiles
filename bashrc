@@ -129,6 +129,10 @@ if type __git_ps1 &>/dev/null; then
     export PS1="\h:\W\$(__git_ps1) $ "
 fi
 
+if [ -f ~/Code/dotfiles/homebrew-token-export.sh ]; then
+    source ~/Code/dotfiles/homebrew-token-export.sh
+fi
+
 # TEX
 export PATH="/usr/local/opt/texinfo/bin:$PATH"
 
