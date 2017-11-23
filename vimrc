@@ -232,3 +232,18 @@ map <C-m> :TagbarToggle<CR>
 " Better find and replace
 map <leader>fr :%s///g<left><left>
 map <leader>frl :s///g<left><left>
+
+" Performance improvements
+if has("mac")
+  set nocursorline
+
+  if exists("+relativenumber")
+    set norelativenumber
+  endif
+
+  set foldlevel=0
+  set foldmethod=manual
+
+  " maybe
+  " let loaded_matchparen = 1
+endif
