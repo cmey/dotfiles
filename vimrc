@@ -75,12 +75,6 @@ function! BuildYCM(info)
   endif
 endfunction
 
-function! Build_color_coded(info)
-  if a:info.status == 'installed' || a:info.status == 'updated' || a:info.force
-    !mkdir -p build && cd build && cmake .. && make && make install && make clean && make clean_clang
-  endif
-endfunction
-
 " plugins on GitHub repo
 
 Plug 'JuliaEditorSupport/julia-vim'
@@ -92,7 +86,6 @@ Plug 'bling/vim-bufferline'
 Plug 'chrisbra/csv.vim'
 Plug 'christoomey/vim-sort-motion'
 Plug 'janko-m/vim-test'
-Plug 'jeaye/color_coded', { 'do': function('Build_color_coded') }
 Plug 'jiangmiao/auto-pairs'
 Plug 'jpalardy/vim-slime'
 Plug 'jreybert/vimagit'
@@ -118,6 +111,8 @@ Plug 'wincent/loupe'
 
 Plug 'dhruvasagar/vim-prosession' " deps on tpope/vim-obsession
 Plug 'gregsexton/gitv' " deps on tpope/vim-fugitive
+
+" Plug 'jeaye/color_coded' is slow and useless
 
 " All of your Plugins must be added before the following line
 call plug#end()
