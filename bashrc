@@ -69,7 +69,7 @@ eval "$(rbenv init -)"
 export JULIAPATH='/Applications/Julia-0.6.app/Contents/Resources/julia/bin'
 export PATH="$JULIAPATH:$PATH"
 # Escher
-export PATH=~/.julia/v0.4/Escher/bin:$PATH
+export PATH=~/.julia/v0.6/Escher/bin:$PATH
 # Parallelization with: Threads.@threads for i = 1:length(...)
 export JULIA_NUM_THREADS=4
 
