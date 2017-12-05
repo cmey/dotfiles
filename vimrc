@@ -90,6 +90,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'jpalardy/vim-slime'
 Plug 'jreybert/vimagit'
 Plug 'jtratner/vim-flavored-markdown', { 'for': 'markdown'}
+Plug 'luochen1990/rainbow'
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'
 Plug 'pbogut/fzf-mru.vim'
@@ -149,6 +150,7 @@ augroup END
 set relativenumber
 set number
 nnoremap <leader>n :exec &nu==&rnu? "se nu!" : "se rnu!"<CR>
+
 " set mouse+=a    " avoid copy paste line numbers
 
 " highlight tabs and trailing spaces
@@ -156,6 +158,7 @@ set encoding=utf-8
 set list listchars=tab:→\ ,trail:·
 
 runtime macros/matchit.vim  " match parens, etc.
+let g:rainbow_active = 1  " rainbow parens, 0 if you want to enable it later via :RainbowToggle
 
 set updatetime=250  " git statuses
 
