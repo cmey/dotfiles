@@ -156,7 +156,7 @@ nnoremap <leader>n :exec &nu==&rnu? "se nu!" : "se rnu!"<CR>
 
 " highlight tabs and trailing spaces
 set encoding=utf-8
-set list listchars=tab:→\ ,trail:·
+set list listchars=tab:▸\ ,trail:·
 
 runtime macros/matchit.vim  " match parens, etc.
 let g:rainbow_active = 1  " rainbow parens, 0 if you want to enable it later via :RainbowToggle
