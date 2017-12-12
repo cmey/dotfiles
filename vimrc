@@ -123,6 +123,7 @@ call plug#end()
 
 " cmey changes:
 let mapleader=","
+set colorcolumn=120
 let elite_mode=1
 
 " Disable arrow movement, resize splits instead.
