@@ -77,12 +77,13 @@ endfunction
 
 " plugins on GitHub repo
 
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
-Plug 'blueyed/vim-diminactive'
 Plug 'bling/vim-bufferline'
+Plug 'blueyed/vim-diminactive'
 Plug 'chrisbra/csv.vim'
 Plug 'christoomey/vim-sort-motion'
 Plug 'janko-m/vim-test'
@@ -91,7 +92,6 @@ Plug 'jpalardy/vim-slime'
 Plug 'jreybert/vimagit'
 Plug 'jtratner/vim-flavored-markdown', { 'for': 'markdown'}
 Plug 'luochen1990/rainbow'
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'
 Plug 'pbogut/fzf-mru.vim'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
@@ -109,6 +109,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-latex/vim-latex'
 Plug 'vim-syntastic/syntastic'
 Plug 'wincent/loupe'
+Plug 'zirrostig/vim-schlepp'
 
 Plug 'dhruvasagar/vim-prosession' " deps on tpope/vim-obsession
 Plug 'gregsexton/gitv' " deps on tpope/vim-fugitive
@@ -224,6 +225,12 @@ nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
+
+" vim-schlepp
+vmap <unique> <up>    <Plug>SchleppUp
+vmap <unique> <down>  <Plug>SchleppDown
+vmap <unique> <left>  <Plug>SchleppLeft
+vmap <unique> <right> <Plug>SchleppRight
 
 " Other mappings configuration
 map <leader>f :echo @%<CR>  " print current file name
