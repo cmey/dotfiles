@@ -86,6 +86,7 @@ Plug 'bling/vim-bufferline'
 Plug 'blueyed/vim-diminactive'
 Plug 'chrisbra/csv.vim'
 Plug 'christoomey/vim-sort-motion'
+Plug 'godlygeek/tabular'
 Plug 'janko-m/vim-test'
 Plug 'jiangmiao/auto-pairs'
 Plug 'jpalardy/vim-slime'
@@ -165,7 +166,7 @@ let g:rainbow_active = 1  " rainbow parens, 0 if you want to enable it later via
 set updatetime=250  " git statuses
 
 " YouCompleteMe
-let g:ycm_python_binary_path = 'python'  " use python binary from virtual env for jedi
+let g:ycm_python_binary_path    = 'python'  " use python binary from virtual env for jedi
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'  " fallback default compile flags
 let g:ycm_collect_identifiers_from_tags_files = 1   " YouCompleteMe use ctags
 
