@@ -3,7 +3,7 @@ export PATH=~/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 # END fbf033cf-0bd8-4b62-bf8a-1a490c72108f
 # BEGIN 0120fc47-8faa-46bd-99ab-da05b504858e
-export PATH=$PATH:"/opt/cypress/yagarto-4.7.2/bin"
+export PATH=$PATH:/opt/cypress/yagarto-4.7.2/bin
 export ARMGCC_INSTALL_PATH="/opt/cypress/yagarto-4.7.2"
 export ARMGCC_VERSION="4.7.2"
 export FX3_INSTALL_PATH="/opt/cypress/cyfx3sdk"
@@ -43,12 +43,11 @@ alias ipy3="ipython3 notebook"
 alias cleanpyc="find . -iname '*.pyc' -exec rm -rf {} \;"
 
 # MacPorts
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Homebrew
-export PATH="$PATH:/usr/local/bin:/usr/local/sbin"
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-export PATH="~/bin:$PATH"
-export PATH="~/Downloads/gcutil-1.8.3:~/Downloads/gsutil:$PATH"
+export PATH=~/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/lib:/opt/X11/lib:$LD_LIBRARY_PATH
 
 # OPENCL
@@ -64,8 +63,8 @@ export PYTHONSTARTUP=~/.pythonrc.py
 eval "$(rbenv init -)"
 
 # JULIA
-export JULIAPATH='/Applications/Julia-0.6.app/Contents/Resources/julia/bin'
-export PATH="$JULIAPATH:$PATH"
+export JULIAPATH=/Applications/Julia-0.6.app/Contents/Resources/julia/bin
+export PATH=$JULIAPATH:$PATH
 # Escher
 export PATH=~/.julia/v0.6/Escher/bin:$PATH
 # Parallelization with: Threads.@threads for i = 1:length(...)
@@ -134,7 +133,7 @@ if [ -f ~/Code/dotfiles/homebrew-token-export.sh ]; then
 fi
 
 # TEX
-export PATH="/usr/local/opt/texinfo/bin:$PATH"
+export PATH=/usr/local/opt/texinfo/bin:$PATH
 
 # FISH SHELL, see config in TODO: find config file name
 #fish
@@ -160,9 +159,3 @@ export BNI_QT_DIR="/Users/cmey/Qt/5.6"
 # BEGIN 9ff6e834-e8ac-4454-95a9-a6d3e2308296
 export BNI_LIBS_ROOT="/Users/cmey/software-libs"
 # END 9ff6e834-e8ac-4454-95a9-a6d3e2308296
-
-PATH="/Users/cmey/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/Users/cmey/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/Users/cmey/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/Users/cmey/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/cmey/perl5"; export PERL_MM_OPT;
