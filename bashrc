@@ -154,7 +154,7 @@ export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 # END d211d168-c177-41b2-812e-0a0dff6475a0
 # BEGIN 77afbd10-e4d8-45ac-9877-9767f81c3bc0
-export BNI_QT_DIR="/Users/cmey/Qt/5.6"
+export BNI_QT_DIR="/Users/cmey/Qt/5.6.3"
 # END 77afbd10-e4d8-45ac-9877-9767f81c3bc0
 # BEGIN 9ff6e834-e8ac-4454-95a9-a6d3e2308296
 export BNI_LIBS_ROOT="/Users/cmey/software-libs"
