@@ -23,6 +23,7 @@ alias dir="ls"
 alias dor="dir"
 alias dockerenv='eval $(docker-machine env default)'
 alias find='gfind -L'
+alias f='find . -iname'
 alias got='git'
 alias grip='grip -b'  # markdown preview
 alias j='$(pyenv which jupyter) notebook'
