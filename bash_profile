@@ -3,11 +3,11 @@
 # Sourcing bashrc starts to be slow. We don't need to source twice. Comment the following.
 
 # BEGIN 8841bf92-478f-48e0-aaee-94752af0b880
-# source ~/.bashrc
+source ~/.bashrc
 # END 8841bf92-478f-48e0-aaee-94752af0b880
 
 # BEGIN b0f03bf4-ba27-4d31-a681-949c39de9b64
-source ~/.bashrc
+# source ~/.bashrc
 # END b0f03bf4-ba27-4d31-a681-949c39de9b64
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
