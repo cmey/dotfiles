@@ -81,7 +81,6 @@ Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'airblade/vim-gitgutter'
-Plug 'altercation/vim-colors-solarized'
 Plug 'bling/vim-bufferline'
 Plug 'blueyed/vim-diminactive'
 Plug 'chrisbra/csv.vim'
@@ -178,11 +177,6 @@ set rtp+=/usr/local/opt/fzf
 nnoremap <c-p> :FZF<cr>
 nnoremap <leader>p :FZFMru<cr>
 
-" solarized
-syntax enable
-set background=dark
-colorscheme solarized
-
 " vim-slime: send to tmux (instead of the default: screen)
 let g:slime_target = "tmux"
 
@@ -203,8 +197,6 @@ let g:tex_flavor='latex'
 let g:bufferline_echo = 0
 
 " vim-airline
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='dark'
 " let g:airline_extensions = ['branch']
 " determine whether bufferline will overwrite customization variables
 let g:airline#extensions#bufferline#overwrite_variables = 1
