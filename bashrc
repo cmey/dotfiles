@@ -136,6 +136,9 @@ fi
 # TEX
 export PATH=/usr/local/opt/texinfo/bin:$PATH
 
+# THEFUCK correct mistyped console commands
+eval $(thefuck --alias)
+
 # FISH SHELL, see config in TODO: find config file name
 #fish
 
