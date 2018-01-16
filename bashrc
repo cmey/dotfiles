@@ -26,6 +26,7 @@ alias find='gfind -L'
 alias f='find . -iname'
 alias got='git'
 alias grip='grip -b'  # markdown preview
+alias htop='glances'  # htop doesn't support macOS High Sierra
 alias j='$(pyenv which jupyter) notebook'
 alias ju="julia -e 'using IJulia; IJulia.notebook()'"
 alias k='kill %%'
