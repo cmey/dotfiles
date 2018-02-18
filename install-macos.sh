@@ -49,7 +49,7 @@ brew install bash-completion bash-git-prompt
 # Utils
 brew install gcc
 brew link gcc  # not linked by default, r needs it
-brew install blitz cheat ctags findutils fzf gifsicle glances gpg grip htop imagemagick mas mplayer postgresql r ripgrep thefuck tmux tree
+brew install blitz cheat ctags findutils fzf gifsicle glances gpg grip htop imagemagick mas mplayer postgresql r ripgrep stow thefuck tmux tree
 brew install vim
 brew cask install  angry-ip-scanner dash disk-inventory-x docker dropbox dropbox-encore evernote gpg-suite hex-fiend iterm2 julia meld openoffice pycharm-ce rescuetime rstudio skype slack spectacle transmission vlc zotero
 
@@ -69,15 +69,7 @@ mkdir -p ~/.vim/files/info/
 mkdir -p ~/.vim/autoload
 
 # Install links (sym)
-ln -sf $PWD/bashrc ~/.bashrc
-ln -sf $PWD/bash_profile ~/.bash_profile
-ln -sf $PWD/env-butterfly.sh ~/bin/
-ln -sf $PWD/vimrc ~/.vim/vimrc
-ln -sf $PWD/pdbrc ~/.pdbrc
-ln -sf $PWD/juliarc.jl ~/.juliarc.jl
-ln -sf $PWD/pythonrc.py ~/.pythonrc.py
-ln -sf $PWD/iterm2_shell_integration.bash ~/.iterm2_shell_integration.bash
-#ln -sf $PWD/custom.css ~/.jupyter/custom/custom.css  # dark Jupyter
+stow bash bin vim python julia iterm --target=$HOME
 
 # fzf setup
 /usr/local/opt/fzf/install  # install fzf bash extensions (modifies bash history feature w/ Ctrl-R)
