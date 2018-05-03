@@ -3,7 +3,7 @@ export PATH=~/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 # END fbf033cf-0bd8-4b62-bf8a-1a490c72108f
 # BEGIN 0120fc47-8faa-46bd-99ab-da05b504858e
-export PATH=$PATH:/opt/cypress/yagarto-4.7.2/bin
+export PATH=$PATH:"/opt/cypress/yagarto-4.7.2/bin"
 export ARMGCC_INSTALL_PATH="/opt/cypress/yagarto-4.7.2"
 export ARMGCC_VERSION="4.7.2"
 export FX3_INSTALL_PATH="/opt/cypress/cyfx3sdk"
