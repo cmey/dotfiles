@@ -44,6 +44,7 @@ alias ipy2="ipython2 notebook"
 alias ipy3="ipython3 notebook"
 alias cleanpyc="find . -iname '*.pyc' -exec rm -rf {} \;"
 alias vimup="vim +PlugUpgrade +PlugUpdate +qall"
+alias julia="julia --quiet"  # Suppress startup banner
 
 # MacPorts
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
