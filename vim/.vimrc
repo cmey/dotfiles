@@ -179,6 +179,10 @@ set rtp+=/usr/local/opt/fzf
 nnoremap <c-p> :FZF<cr>
 nnoremap <leader>p :FZFMru<cr>
 
+" vim-diminactive
+" set background color to gray - default is red. !! also sets colorcolumn's color (right max col)
+highlight ColorColumn ctermbg=0 guibg=#334551
+
 " vim-slime: send to tmux (instead of the default: screen)
 let g:slime_target = "tmux"
 
