@@ -552,7 +552,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>389 39 766 77 0 0 1440 878 </string>
+	<string>978 66 766 77 0 0 2560 1418 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>601 663 606 456 0 0 2048 1129 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
@@ -560,9 +560,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 456 0 0 2048 1129 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>2 257 796 473 0 0 1440 878 </string>
+	<string>775 373 796 473 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3 0 953 878 0 0 1440 878 </string>
+	<string>482 0 956 878 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1840 107 585 452 1440 -19 2048 1129 </string>
 	<key>New Bookmarks</key>
@@ -1147,7 +1147,7 @@
 			<key>Log Directory</key>
 			<string></string>
 			<key>Minimum Contrast</key>
-			<real>0.0</real>
+			<real>0.60171786221590906</real>
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
@@ -1157,7 +1157,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SFMono-Semibold 12</string>
+			<string>Menlo-Regular 12</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -2189,7 +2189,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-04-11T13:05:44Z</date>
+	<date>2018-05-23T14:25:14Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -2237,7 +2237,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.5</string>
+	<string>3.1.6</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
