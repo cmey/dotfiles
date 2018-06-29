@@ -115,6 +115,10 @@ Plug 'vim-syntastic/syntastic'
 Plug 'wincent/loupe'
 Plug 'zirrostig/vim-schlepp'
 
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+
 Plug 'dhruvasagar/vim-prosession' " deps on tpope/vim-obsession
 Plug 'gregsexton/gitv' " deps on tpope/vim-fugitive
 
@@ -172,6 +176,9 @@ set updatetime=250  " git statuses
 let g:ycm_python_binary_path    = 'python'  " use python binary from virtual env for jedi
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'  " fallback default compile flags
 let g:ycm_collect_identifiers_from_tags_files = 1   " YouCompleteMe use ctags
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
 
 " fzf
 set rtp+=/usr/local/opt/fzf
