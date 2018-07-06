@@ -60,6 +60,11 @@ set undodir     =$HOME/.vim/files/undo/
 set viminfo     ='100,n$HOME/.vim/files/info/viminfo
 
 
+"Work around https://github.com/vim/vim/issues/3117 < https://github.com/vim/vim/issues/3117#issuecomment-402622616 >
+if has('python3')
+  silent! python3 1
+endif
+
 
 " vim-plug plugin maganer
 " Install vim-plug
