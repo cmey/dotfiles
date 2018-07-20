@@ -61,11 +61,6 @@ export LD_LIBRARY_PATH=/usr/local/lib:/opt/X11/lib:$LD_LIBRARY_PATH
 export PYTHONSTARTUP=~/.pythonrc.py
 # See also pyenv below
 
-# RUBY
-# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-eval "$(rbenv init -)"
-
 # JULIA
 export JULIAPATH=/Applications/Julia-0.6.app/Contents/Resources/julia/bin
 export PATH=$JULIAPATH:$PATH
@@ -90,9 +85,6 @@ export JULIA_NUM_THREADS=4
 # export AF_DISABLE_GRAPHICS=1
 # export DYLD_LIBRARY_PATH=/usr/local/Cellar/arrayfire/3.0.0/lib/:$DYLD_LIBRARY_PATH
 # export PYTHONPATH=/Users/cmey/Code/GitHub/arrayfire-python:$PYTHONPATH
-
-# AWS bash completion
-complete -C aws_completer aws
 
 # BASH HISTORY
 # Displayed format.
