@@ -44,7 +44,6 @@ alias ipy2="ipython2 notebook"
 alias ipy3="ipython3 notebook"
 alias cleanpyc="find . -iname '*.pyc' -exec rm -rf {} \;"
 alias vimup="vim +PlugUpgrade +PlugUpdate +qall"
-alias julia="julia --quiet"  # Suppress startup banner
 
 # MacPorts
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
@@ -62,10 +61,10 @@ export PYTHONSTARTUP=~/.pythonrc.py
 # See also pyenv below
 
 # JULIA
-export JULIAPATH=/Applications/Julia-0.6.app/Contents/Resources/julia/bin
-export PATH=$JULIAPATH:$PATH
+alias julia6="/Applications/Julia-0.6.app/Contents/Resources/julia/bin/julia --quiet"
+alias julia7="/Applications/Julia-0.7.app/Contents/Resources/julia/bin/julia --quiet"
 # Escher
-export PATH=~/.julia/v0.6/Escher/bin:$PATH
+# export PATH=~/.julia/v0.6/Escher/bin:$PATH
 # Parallelization with: Threads.@threads for i = 1:length(...)
 export JULIA_NUM_THREADS=4
 
