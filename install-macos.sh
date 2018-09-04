@@ -32,7 +32,8 @@ git config --global push.default current  # auto set upstream when pushing a new
 
 git lfs install --force
 # git pullall  # pull and update submodules
-git config --global alias.pullall '!f(){ git pull "$@" && git submodule --quiet sync && git submodule update --init --recursive; }; f'
+git config --global alias.su '!f(){ git submodule --quiet sync && git submodule update --init --recursive; }; f'
+git config --global alias.pullall '!f(){ git pull "$@" && git su; }; f'
 # git lg  # prettier git log
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit"
 git config --global color.ui auto
