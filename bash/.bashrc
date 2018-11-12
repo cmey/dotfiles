@@ -136,22 +136,22 @@ eval $(thefuck --alias)
 # This function checks whether we have a given program on the system.
 # No need for bulky functions in memory if we don't.
 #
-have()
-{
-    unset -v have
-    # Completions for system administrator commands are installed as well in
-    # case completion is attempted via `sudo command ...'.
-    PATH=$PATH:/sbin:/usr/sbin:/usr/local/sbin type $1 &>/dev/null &&
-    have="yes"
-}
-#export -f function_name
+#have()
+#{
+#    unset -v have
+#    # Completions for system administrator commands are installed as well in
+#    # case completion is attempted via `sudo command ...'.
+#    PATH=$PATH:/sbin:/usr/sbin:/usr/local/sbin type $1 &>/dev/null &&
+#    have="yes"
+#}
+##export -f function_name
 
-if type brew 2&>/dev/null; then
-  for completion_file in $(brew --prefix)/etc/bash_completion.d/*; do
-    echo "$completion_file"
-    source "$completion_file"
-  done
-fi
+#if type brew 2&>/dev/null; then
+#  for completion_file in $(brew --prefix)/etc/bash_completion.d/*; do
+#    echo "$completion_file"
+#    source "$completion_file"
+#  done
+#fi
 
 # FISH SHELL, see config in TODO: find config file name
 #fish
