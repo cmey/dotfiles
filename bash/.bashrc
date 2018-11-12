@@ -177,3 +177,8 @@ export BNI_QT_DIR="/Users/cmey/Qt/5.6.3"
 # BEGIN 9ff6e834-e8ac-4454-95a9-a6d3e2308296
 export BNI_LIBS_ROOT="/Users/cmey/software-libs"
 # END 9ff6e834-e8ac-4454-95a9-a6d3e2308296
+# BEGIN d63f2871-965d-4a42-9576-d33f3a08434c
+export ANDROID_HOME="/opt/android-sdk"
+export ANDROID_NDK_HOME="/opt/android-ndk/android-ndk-r17b"
+export PATH=$PATH:"/opt/android-sdk/tools/bin"
+# END d63f2871-965d-4a42-9576-d33f3a08434c
