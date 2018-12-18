@@ -24,6 +24,7 @@ alias dor="dir"
 alias dockerenv='eval $(docker-machine env default)'
 alias find='gfind -L'
 alias f='find . -iname'
+alias gdiff='git diff --color-words=.'
 alias got='git'
 alias grip='grip -b'  # markdown preview
 alias htop='glances'  # htop doesn't support macOS High Sierra
