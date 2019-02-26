@@ -112,9 +112,6 @@ fi
 # TEX
 export PATH=/usr/local/opt/texinfo/bin:$PATH
 
-# THEFUCK correct mistyped console commands
-eval $(thefuck --alias)
-
 # HOMEBREW configure Completions
 # This function checks whether we have a given program on the system.
 # No need for bulky functions in memory if we don't.
