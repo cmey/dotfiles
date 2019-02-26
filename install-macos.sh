@@ -70,7 +70,7 @@ mkdir -p ~/.vim/files/info/
 mkdir -p ~/.vim/autoload
 
 # Install links (sym)
-stow bash bin vim python julia iterm --target=$HOME
+stow shell bin vim python julia iterm --target=$HOME
 
 # fzf setup
 /usr/local/opt/fzf/install  # install fzf bash extensions (modifies bash history feature w/ Ctrl-R)
