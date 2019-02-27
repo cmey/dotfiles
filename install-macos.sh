@@ -50,7 +50,7 @@ brew install bash-completion bash-git-prompt
 # Utils
 brew install gcc
 brew link gcc  # not linked by default, r needs it
-brew install blitz cheat ctags findutils fzf gifsicle glances gpg grip htop imagemagick mas mplayer postgresql ranger r ripgrep stow tmux tree
+brew install blitz cheat ctags findutils fzf gifsicle glances gpg grip htop imagemagick mas mplayer postgresql ranger r ripgrep stow tmux tree zsh
 brew install vim
 brew cask install  angry-ip-scanner dash disk-inventory-x docker dropbox dropbox-encore evernote gpg-suite hex-fiend iterm2 julia meld openoffice pycharm-ce rescuetime rstudio skype slack spectacle transmission vlc zotero
 
@@ -69,7 +69,7 @@ mkdir -p ~/.vim/files/undo/
 mkdir -p ~/.vim/files/info/
 mkdir -p ~/.vim/autoload
 
-# Install links (sym)
+# Install (sym)links
 stow shell bin vim python julia iterm --target=$HOME
 
 # fzf setup
@@ -77,3 +77,12 @@ stow shell bin vim python julia iterm --target=$HOME
 
 # Vim setup
 vim -c PlugInstall  # Install vim plugins (configured in vimrc)
+
+# zsh install
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# zsh setup as default shell
+shell_path=/usr/local/bin/zsh
+if ! grep "$shell_path" /etc/shells > /dev/null 2>&1 ; then
+    sudo sh -c "echo $shell_path >> /etc/shells"
+fi
+chsh -s "$shell_path"
