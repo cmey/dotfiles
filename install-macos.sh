@@ -69,6 +69,16 @@ mkdir -p ~/.vim/files/undo/
 mkdir -p ~/.vim/files/info/
 mkdir -p ~/.vim/autoload
 
+# zsh install
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+rm -f ~/.zshrc ~/.zshrc.pre-oh-my-zsh
+# zsh setup as default shell
+shell_path=/usr/local/bin/zsh
+if ! grep "$shell_path" /etc/shells > /dev/null 2>&1 ; then
+    sudo sh -c "echo $shell_path >> /etc/shells"
+fi
+chsh -s "$shell_path"
+
 # Install (sym)links
 stow shell bin vim python julia iterm --target=$HOME
 
@@ -78,11 +88,3 @@ stow shell bin vim python julia iterm --target=$HOME
 # Vim setup
 vim -c PlugInstall  # Install vim plugins (configured in vimrc)
 
-# zsh install
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-# zsh setup as default shell
-shell_path=/usr/local/bin/zsh
-if ! grep "$shell_path" /etc/shells > /dev/null 2>&1 ; then
-    sudo sh -c "echo $shell_path >> /etc/shells"
-fi
-chsh -s "$shell_path"
