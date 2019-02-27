@@ -50,7 +50,7 @@ brew install bash-completion bash-git-prompt
 # Utils
 brew install gcc
 brew link gcc  # not linked by default, r needs it
-brew install blitz cheat ctags findutils fzf gifsicle glances gpg grip htop imagemagick mas mplayer postgresql ranger r ripgrep stow tmux tree zsh
+brew install blitz cheat ctags findutils fzf gifsicle glances gpg grip htop imagemagick mas mplayer postgresql ranger r ripgrep stow tmux tree zsh zsh-syntax-highlighting
 brew install vim
 brew cask install  angry-ip-scanner dash disk-inventory-x docker dropbox dropbox-encore evernote gpg-suite hex-fiend iterm2 julia meld openoffice pycharm-ce rescuetime rstudio skype slack spectacle transmission vlc zotero
 

@@ -60,6 +60,7 @@ setopt histappend
 compinit
 _comp_options+=(globdots)
 
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
