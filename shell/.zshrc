@@ -41,6 +41,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  fzf
   git
   pyenv
   z
@@ -54,8 +55,6 @@ source $ZSH/oh-my-zsh.sh
 source ~/rc
 
 setopt histappend
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 compinit
 _comp_options+=(globdots)
