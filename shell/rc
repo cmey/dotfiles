@@ -89,6 +89,7 @@ export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
 
 # GIT
+export GIT_PAGER=cat  # don't page with less
 # git mergetool --tool=p4merge
 # Setting the mergetool.keepBackup configuration variable to false
 
