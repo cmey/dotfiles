@@ -44,6 +44,8 @@ plugins=(
   fzf
   git
   pyenv
+  shrink-path
+  virtualenv
   z
 )
 
@@ -60,6 +62,26 @@ compinit
 _comp_options+=(globdots)
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Update prompt line
+function virtenv_indicator {
+    if [[ -z $VIRTUAL_ENV ]] then
+        psvar[1]=''
+    else
+        psvar[1]=${VIRTUAL_ENV##*/}
+    fi
+}
+add-zsh-hook precmd virtenv_indicator
+
+PROMPT='${ret_status}%{$fg[green]%}$(virtualenv_prompt_info)%{$reset_color%}% $(git_prompt_info)%{$fg[cyan]%}$(shrink_path -l -t)%{$reset_color%} '
+
+# ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}(%{$fg[red]%}"
+# ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
+# ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%})%{$fg[yellow]%}"
+# ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
+
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
