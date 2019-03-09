@@ -73,7 +73,7 @@ function virtenv_indicator {
 }
 add-zsh-hook precmd virtenv_indicator
 
-PROMPT='${ret_status}%{$fg[green]%}$(virtualenv_prompt_info)%{$reset_color%}% $(git_prompt_info)%{$fg[cyan]%}$(shrink_path -l -t)%{$reset_color%} '
+PROMPT='${ret_status}%{$fg[green]%}$(virtualenv_prompt_info)%{$reset_color%}% $(git_prompt_info)%{$fg_bold[cyan]%}$(shrink_path -l -t)%{$reset_color%} '
 
 # ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}(%{$fg[red]%}"
