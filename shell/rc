@@ -21,6 +21,7 @@ alias orig="find . -name '*orig*'"
 alias p='git pullall'
 alias pos='source ~/bin/env-butterfly.sh'
 alias py="source ~/bin/env-pyenv-standalone.sh"
+alias sand="./bazel-debug run //host/Applications/ImagingSandbox"
 alias spell='python $BNI_DEV_ROOT/Build/StaticCheck/bniSpell/bniSpellCheck.py'
 alias helios='open $BNI_DEV_ROOT/Applications/HeliosNativeIos/Helios.xcworkspace'
 alias i="cd /Users/cmey/Code/GitHub/ButterflyNetwork/poseidon/software/imaging/imaging; pos"
