@@ -1,3 +1,6 @@
+# BEGIN 77afbd10-e4d8-45ac-9877-9767f81c3bc0
+export BNI_QT_DIR="/Users/cmeyer/Qt/5.6.3"
+# END 77afbd10-e4d8-45ac-9877-9767f81c3bc0
 # Load config that is common (across shells)
 source ~/rc
 
@@ -92,12 +95,6 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 # END d211d168-c177-41b2-812e-0a0dff6475a0
-# BEGIN 77afbd10-e4d8-45ac-9877-9767f81c3bc0
-export BNI_QT_DIR="/Users/cmey/Qt/5.6.3"
-# END 77afbd10-e4d8-45ac-9877-9767f81c3bc0
-# BEGIN 9ff6e834-e8ac-4454-95a9-a6d3e2308296
-export BNI_LIBS_ROOT="/Users/cmey/software-libs"
-# END 9ff6e834-e8ac-4454-95a9-a6d3e2308296
 # BEGIN d63f2871-965d-4a42-9576-d33f3a08434c
 export ANDROID_HOME="/opt/android-sdk"
 export ANDROID_NDK_HOME="/opt/android-ndk/android-ndk-r17b"
