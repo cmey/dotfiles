@@ -44,6 +44,7 @@ plugins=(
   fzf
   git
   pyenv
+  rbenv
   shrink-path
   virtualenv
   z
