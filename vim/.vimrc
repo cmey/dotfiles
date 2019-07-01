@@ -187,6 +187,8 @@ set updatetime=250  " git statuses
 let g:ycm_python_binary_path    = 'python'  " use python binary from virtual env for jedi
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'  " fallback default compile flags
 let g:ycm_collect_identifiers_from_tags_files = 1   " YouCompleteMe use ctags
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g   :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
