@@ -161,6 +161,12 @@ augroup markdown
     au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 augroup END
 
+" Enable folding
+set foldlevel=99
+set foldmethod=indent
+" Enable folding with the spacebar
+nnoremap <space> za
+
 " Vim's new hybrid line number mode
 set relativenumber
 set number
@@ -261,9 +267,6 @@ if has("mac")
     set norelativenumber
   endif
 
-  set foldlevel=0
-  set foldmethod=manual
-
-  " maybe
+  "  maybe
   " let loaded_matchparen = 1
 endif
