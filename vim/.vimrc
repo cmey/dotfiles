@@ -119,10 +119,6 @@ Plug 'vim-syntastic/syntastic'
 Plug 'wincent/loupe'
 Plug 'zirrostig/vim-schlepp'
 
-Plug 'Shougo/deoplete.nvim'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
-
 Plug 'dhruvasagar/vim-prosession' " deps on tpope/vim-obsession
 Plug 'gregsexton/gitv' " deps on tpope/vim-fugitive
 
