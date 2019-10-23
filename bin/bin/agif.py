@@ -1,4 +1,4 @@
-#!~/.pyenv/shims/python
+#!python
 
 import imageio
 import sys
