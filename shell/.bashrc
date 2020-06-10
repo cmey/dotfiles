@@ -1,5 +1,8 @@
+# BEGIN 462a054b-5f86-4159-9d0f-fb35dc983593
+export BASH_SILENCE_DEPRECATION_WARNING=1
+# END 462a054b-5f86-4159-9d0f-fb35dc983593
 # BEGIN 77afbd10-e4d8-45ac-9877-9767f81c3bc0
-export BNI_QT_DIR="/Users/cmeyer/Qt/5.6.3"
+export BNI_QT_DIR="/Users/cmeyer/Qt/5.12.6"
 # END 77afbd10-e4d8-45ac-9877-9767f81c3bc0
 # Load config that is common (across shells)
 source ~/rc
@@ -42,7 +45,7 @@ shopt -s histappend
 export GIT_PS1_SHOWCOLORHINTS=true
 export GIT_PS1_SHOWDIRTYSTATE=  # true
 export GIT_PS1_SHOWUNTRACKEDFILES=  # true
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+# [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 if [ -f /usr/local/share/gitprompt.sh ]; then
     export GIT_PROMPT_THEME=Solarized # use theme optimized for solarized color scheme
     export GIT_PROMPT_ONLY_IN_REPO=1
@@ -98,5 +101,10 @@ export LC_ALL=en_US.UTF-8
 # BEGIN d63f2871-965d-4a42-9576-d33f3a08434c
 export ANDROID_HOME="/opt/android-sdk"
 export ANDROID_NDK_HOME="/opt/android-ndk/android-ndk-r17b"
-export PATH=$PATH:"/opt/android-sdk/tools/bin"
+export PATH="/opt/android-sdk/tools/bin:/opt/android-sdk/platform-tools:$PATH"
 # END d63f2871-965d-4a42-9576-d33f3a08434c
+# BEGIN 1a3c0481-3aac-4d69-a495-9dfbbe3ccf48
+export BNI_DEV_ROOT=/Users/cmeyer/Code/ButterflyNetwork/software/dev-ops/../host
+export BNI_BUILD=$BNI_DEV_ROOT/Build
+export PYTHONPATH=/Users/cmeyer/Code/ButterflyNetwork/software/dev-ops/../bazel-bin/host/Applications/BniHardwareWrapper
+# END 1a3c0481-3aac-4d69-a495-9dfbbe3ccf48
