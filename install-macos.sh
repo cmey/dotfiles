@@ -40,6 +40,7 @@ git config --global color.ui auto
 git config --global fetch.prune true  # prune deleted remotes automatically on each pull or fetch
 git config --global rerere.enabled true
 git config --global core.excludesfile "$PWD/gitignore-global"
+git config --global diff.noprefix true  # remove a/ b/ in front of origin and destination paths
 
 # Powerline Meslo fonts
 git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
