@@ -92,6 +92,7 @@ Plug 'blueyed/vim-diminactive'
 Plug 'chrisbra/csv.vim'
 Plug 'christoomey/vim-sort-motion'
 Plug 'godlygeek/tabular'
+Plug 'jalvesaq/vimcmdline'
 Plug 'janko-m/vim-test'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'jiangmiao/auto-pairs'
@@ -132,6 +133,7 @@ call plug#end()
 
 " cmey changes:
 let mapleader=","
+let maplocalleader=","
 set colorcolumn=120
 let elite_mode=1
 
