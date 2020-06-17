@@ -81,7 +81,7 @@ fi
 chsh -s "$shell_path"
 
 # Install (sym)links
-stow shell bin vim python julia iterm --target=$HOME
+stow shell bin vim python julia iterm tmux --target=$HOME
 
 # fzf setup
 /usr/local/opt/fzf/install  # install fzf bash extensions (modifies bash history feature w/ Ctrl-R)
