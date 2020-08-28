@@ -186,7 +186,6 @@ set updatetime=250  " git statuses
 
 " YouCompleteMe
 let g:ycm_python_binary_path    = 'python'  " use python binary from virtual env for jedi
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'  " fallback default compile flags
 let g:ycm_collect_identifiers_from_tags_files = 1   " YouCompleteMe use ctags
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g   :YcmCompleter GoToDefinitionElseDeclaration<CR>
@@ -246,7 +245,7 @@ nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
-nmap <silent> <leader>g :TestVisit<CR>
+nmap <silent> <leader>G :TestVisit<CR>
 
 " vim-schlepp
 vmap <unique> <up>    <Plug>SchleppUp
