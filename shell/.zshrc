@@ -89,3 +89,8 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%})%{$fg[yellow]%}"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
+# BEGIN source-bashrc
+# if [[ -f ~/.bashrc ]]; then
+#   source ~/.bashrc
+# fi
+# END source-bashrc

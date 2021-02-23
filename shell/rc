@@ -1,4 +1,16 @@
+# BEGIN 57b557ba-d370-4940-8b71-bcba0ffcc5d4
+if [ -z "$PYENV_ROOT" ]; then
+  export PYENV_ROOT="${HOME}/.pyenv"
+fi
+export PATH="$PYENV_ROOT/bin:$PATH"
+if [ -x ~/.pyenv/bin/pyenv ]; then
+  eval "$(~/.pyenv/bin/pyenv init -)"
+  eval "$(~/.pyenv/bin/pyenv virtualenv-init -)"
+fi
+# END 57b557ba-d370-4940-8b71-bcba0ffcc5d4
+
 export EDITOR=vim
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home"
 
 # ALIASES
 alias reqs="find . -name '*requirement*'"

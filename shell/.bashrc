@@ -1,3 +1,13 @@
+# BEGIN 57b557ba-d370-4940-8b71-bcba0ffcc5d4
+if [ -z "$PYENV_ROOT" ]; then
+  export PYENV_ROOT="${HOME}/.pyenv"
+fi
+export PATH="$PYENV_ROOT/bin:$PATH"
+if [ -x ~/.pyenv/bin/pyenv ]; then
+  eval "$(~/.pyenv/bin/pyenv init -)"
+  eval "$(~/.pyenv/bin/pyenv virtualenv-init -)"
+fi
+# END 57b557ba-d370-4940-8b71-bcba0ffcc5d4
 # BEGIN 462a054b-5f86-4159-9d0f-fb35dc983593
 export BASH_SILENCE_DEPRECATION_WARNING=1
 # END 462a054b-5f86-4159-9d0f-fb35dc983593
@@ -101,6 +111,7 @@ export LC_ALL=en_US.UTF-8
 # BEGIN d63f2871-965d-4a42-9576-d33f3a08434c
 export ANDROID_HOME="/opt/android-sdk"
 export ANDROID_NDK_HOME="/opt/android-ndk/android-ndk-r17b"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home"
 export PATH="/opt/android-sdk/tools/bin:/opt/android-sdk/platform-tools:$PATH"
 # END d63f2871-965d-4a42-9576-d33f3a08434c
 # BEGIN 1a3c0481-3aac-4d69-a495-9dfbbe3ccf48
