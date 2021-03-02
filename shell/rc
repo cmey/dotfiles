@@ -12,6 +12,11 @@ fi
 export EDITOR=vim
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home"
 
+export BNI_REPO_ROOT=~/Code/ButterflyNetwork/software
+export BNI_DEV_ROOT=$BNI_REPO_ROOT/host
+export BNI_BUILD=$BNI_DEV_ROOT/Build
+export BNI_ROOT=$BNI_DEV_ROOT/build-release
+
 # ALIASES
 alias reqs="find . -name '*requirement*'"
 alias ll="ls -l"
@@ -36,7 +41,8 @@ alias py="source ~/bin/env-pyenv-standalone.sh"
 alias sand="./bazel-debug run //host/Applications/ImagingSandbox"
 alias spell='python $BNI_DEV_ROOT/Build/StaticCheck/bniSpell/bniSpellCheck.py'
 alias helios='open $BNI_DEV_ROOT/Applications/HeliosNativeIos/Helios.xcworkspace'
-alias i="cd /Users/cmey/Code/GitHub/ButterflyNetwork/poseidon/software/imaging/imaging; pos"
+alias i="cd $BNI_DEV_ROOT/imaging/imaging; pos"
+alias version_helios="cat $BNI_DEV_ROOT/Applications/HeliosNativeAndroid/app/version"
 alias ipy="ipython notebook"
 alias ipy2="ipython2 notebook"
 alias ipy3="ipython3 notebook"

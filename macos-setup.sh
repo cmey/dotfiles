@@ -222,7 +222,7 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 # sudo systemsetup -settimezone "Europe/Brussels" > /dev/null
 
-# Disable auto-correct
+# Disable auto-correct (VERIFIED in macOS Catalina 10.15.6)
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Stop iTunes from responding to the keyboard media keys
