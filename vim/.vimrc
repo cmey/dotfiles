@@ -255,11 +255,26 @@ vmap <unique> <right> <Plug>SchleppRight
 
 " Other mappings configuration
 map <leader>f :echo @%<CR>  " print current file name
-map <C-n> :NERDTreeToggle<CR>
-map <C-m> :TagbarToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
+map <leader>m :TagbarToggle<CR>
 " Better find and replace
 map <leader>fr :%s///g<left><left>
 map <leader>frl :s///g<left><left>
+
+" :grep will search from inside vim (using ripgrep)
+set grepprg=rg\ --vimgrep
+set grepformat^=%f:%l:%c:%m
+" open quickfix window automatically
+augroup autoquickfix
+    autocmd!
+    autocmd QuickFixCmdPost [^l]* cwindow
+    autocmd QuickFixCmdPost    l* lwindow
+augroup END
+" In the quickfix window, <CR> is used to jump to the error under the
+" cursor, so undefine any <CR> mapping there so that this feature can work.
+autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+" Mappings for <C-m> and <CR> (Enter) are synonymous in Vim
+autocmd BufReadPost quickfix nnoremap <buffer> <C-m> <C-m>
 
 " Performance improvements
 if has("mac")
