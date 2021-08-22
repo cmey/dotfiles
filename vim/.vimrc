@@ -167,7 +167,7 @@ nnoremap <space> za
 " Vim's new hybrid line number mode
 set relativenumber
 set number
-nnoremap <leader>n :exec &nu==&rnu? "se nu!" : "se rnu!"<CR>
+nnoremap <leader>l :exec &nu==&rnu? "se nu!" : "se rnu!"<CR>
 
 " set mouse+=a    " avoid copy paste line numbers
 
@@ -244,7 +244,7 @@ let g:syntastic_python_flake8_post_args="--max-line-length=100"
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
-nmap <silent> <leader>l :TestLast<CR>
+" nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>G :TestVisit<CR>
 
 " vim-schlepp
