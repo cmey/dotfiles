@@ -1,3 +1,6 @@
+# install basic tools
+sudo apt-get install stow
+
 sudo apt-get install vim
 echo 'export EDITOR=vim' >> ~/.bashrc
 
@@ -21,5 +24,7 @@ eval "$(pyenv virtualenv-init -)"
 
 # install python (deps)
 sudo apt-get install libbz2-dev libssl-dev libsqlite3-dev
-pyenv install 3.6.3
+pyenv install 3.9.1
 
+# install heroku CLI (adds ppa, update with apt-get)
+curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
