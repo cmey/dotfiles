@@ -21,7 +21,8 @@ shopt -s histappend
 # setup git
 git config --global user.email christophe.meyer.pro@gmail.com
 git config --global user.name Christophe Meyer
-git config --global credential.helper cache
+git config --global credential.helper cache  # keep in memory for a few minutes
+git config --global push.default current  # auto set upstream when pushing a new branch
 
 # install docker
 curl -fsSL get.docker.com -o get-docker.sh
