@@ -75,17 +75,17 @@ endif
 " Keep Plug commands between plug#begin/end.
 call plug#begin('~/.vim/plugged')
 
-function! BuildYCM(info)
-  if a:info.status == 'installed' || a:info.status == 'updated' || a:info.force
-    !./install.py
-  endif
-endfunction
+" function! BuildYCM(info)
+"   if a:info.status == 'installed' || a:info.status == 'updated' || a:info.force
+"     !./install.py
+"   endif
+" endfunction
 
 " plugins on GitHub repo
 
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'JuliaEditorSupport/julia-vim'
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+" Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-bufferline'
 Plug 'blueyed/vim-diminactive'
@@ -102,7 +102,7 @@ Plug 'jtratner/vim-flavored-markdown', { 'for': 'markdown'}
 Plug 'luochen1990/rainbow'
 Plug 'majutsushi/tagbar'
 Plug 'pbogut/fzf-mru.vim'
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -185,10 +185,10 @@ let g:rainbow_active = 1  " rainbow parens, 0 if you want to enable it later via
 set updatetime=250  " git statuses
 
 " YouCompleteMe
-let g:ycm_python_binary_path    = 'python'  " use python binary from virtual env for jedi
-let g:ycm_collect_identifiers_from_tags_files = 1   " YouCompleteMe use ctags
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g   :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" let g:ycm_python_binary_path    = 'python'  " use python binary from virtual env for jedi
+" let g:ycm_collect_identifiers_from_tags_files = 1   " YouCompleteMe use ctags
+" let g:ycm_autoclose_preview_window_after_completion=1
+" map <leader>g   :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
