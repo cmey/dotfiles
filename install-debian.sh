@@ -9,7 +9,7 @@ mkdir -p ~/.vim/files/info/
 mkdir -p ~/.vim/autoload
 
 # Install (sym)links
-stow vim python julia tmux --target=$HOME
+stow bin vim python julia tmux --target=$HOME
 
 # Vim setup
 vim -c PlugInstall  # Install vim plugins (configured in vimrc)
