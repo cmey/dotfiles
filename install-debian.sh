@@ -1,4 +1,6 @@
-sudo apt-get install  cmake fzf git git-lfs grip htop ripgrep stow tmux tree vlc vim wget
+sudo apt update
+sudo apt upgrade
+sudo apt install  cmake fzf git git-lfs grip htop ripgrep stow tmux tree vlc vim wget
 
 # Vim folders
 mkdir -p ~/.vim/
@@ -14,9 +16,6 @@ stow bin vim python julia tmux --target=$HOME
 # Vim setup
 vim -c PlugInstall  # Install vim plugins (configured in vimrc)
 echo 'export EDITOR=vim' >> ~/.bashrc
-
-# - When the shell exits, append to the history file instead of overwriting it.
-shopt -s histappend
 
 # setup git
 git config --global user.email christophe.meyer.pro@gmail.com
@@ -45,10 +44,8 @@ mkdir ~/bin
 export PATH="~/bin:$PATH"
 
 # julialang
-julia_archive_file=julia-1.7.2-linux-x86_64.tar.gz
-wget https://julialang-s3.julialang.org/bin/linux/x64/1.7/$julia_archive_file
+cd ~/Downloads
+julia_archive_file=julia-1.8.1-linux-x86_64.tar.gz
+wget https://julialang-s3.julialang.org/bin/linux/x64/1.8/$julia_archive_file
 tar -xzvf $julia_archive_file
-ln -s ~/Downloads/julia-1.7.2/bin/julia ~/bin/
-
-# install heroku CLI (adds ppa, update with apt-get)
-curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
+ln -s ~/Downloads/julia-1.8.1/bin/julia ~/bin/
