@@ -38,14 +38,14 @@ eval "$(pyenv virtualenv-init -)"
 
 # install python (deps)
 sudo apt-get install libbz2-dev libssl-dev libsqlite3-dev
-pyenv install 3.9.1
+pyenv install 3.10.8
 
 mkdir ~/bin
 export PATH="~/bin:$PATH"
 
 # julialang
 cd ~/Downloads
-julia_archive_file=julia-1.8.1-linux-x86_64.tar.gz
+julia_archive_file=julia-1.8.2-linux-x86_64.tar.gz
 wget https://julialang-s3.julialang.org/bin/linux/x64/1.8/$julia_archive_file
 tar -xzvf $julia_archive_file
-ln -s ~/Downloads/julia-1.8.1/bin/julia ~/bin/
+ln -s ~/Downloads/julia-1.8.2/bin/julia ~/bin/
