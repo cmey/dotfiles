@@ -20,7 +20,6 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
-
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
@@ -28,3 +27,6 @@ fi
 
 # Fix GNOME stuttering while moving windows?!
 export CLUTTER_DEFAULT_FPS=60
+
+# Keyboard key repeat rate and delay in X
+xset r rate 300 50
