@@ -1,6 +1,6 @@
 sudo apt update
 sudo apt upgrade
-sudo apt install  cmake fzf git git-lfs grip htop ripgrep stow tmux tree vlc vim wget
+sudo apt install  cmake fd-find fzf git git-lfs grip htop i3 mupdf ripgrep stow tmux tree vlc vim wget
 
 # Vim folders
 mkdir -p ~/.vim/
