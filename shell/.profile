@@ -34,3 +34,17 @@ xset r rate 300 50
 # Rust stuff
 . "$HOME/.cargo/env"
 
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/home/cmey/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/home/cmey/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<
