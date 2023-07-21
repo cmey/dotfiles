@@ -30,3 +30,7 @@ export CLUTTER_DEFAULT_FPS=60
 
 # Keyboard key repeat rate and delay in X
 xset r rate 300 50
+
+# Rust stuff
+. "$HOME/.cargo/env"
+
