@@ -1,6 +1,6 @@
 sudo apt update
 sudo apt upgrade
-sudo apt install  cmake fd-find fzf git git-lfs grip htop i3 mupdf ripgrep stow tmux tree vlc vim wget
+sudo apt install  cmake fd-find fzf git git-lfs grip htop i3 mupdf ranger ripgrep stow tmux tree vlc vim wget
 
 # Vim folders
 mkdir -p ~/.vim/
@@ -44,8 +44,6 @@ mkdir ~/bin
 export PATH="~/bin:$PATH"
 
 # julialang
-cd ~/Downloads
-julia_archive_file=julia-1.8.2-linux-x86_64.tar.gz
-wget https://julialang-s3.julialang.org/bin/linux/x64/1.8/$julia_archive_file
-tar -xzvf $julia_archive_file
-ln -s ~/Downloads/julia-1.8.2/bin/julia ~/bin/
+curl -fsSL https://install.julialang.org | sh
+juliaup add 1.9
+juliaup default 1.9
