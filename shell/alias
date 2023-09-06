@@ -1,0 +1,16 @@
+# ALIASES
+alias fd="fd --hidden --exclude '.git'"
+alias reqs='fd requirement .'
+alias ls='ls --color=auto'
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+alias dir="ls"
+alias dor="dir"
+alias got='git'
+alias grip='grip -b'  # markdown preview
+alias htop='glances'  # htop doesn't support macOS High Sierra
+alias k='kill %%'
+alias cleanpyc="find . -iname '*.pyc' -exec rm -rf {} \;"
+alias vimup="vim +PlugUpgrade +PlugUpdate +qall"
+

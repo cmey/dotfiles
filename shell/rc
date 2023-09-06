@@ -1,96 +1,5 @@
-# BEGIN 57b557ba-d370-4940-8b71-bcba0ffcc5d4
-if [ -z "$PYENV_ROOT" ]; then
-  export PYENV_ROOT="${HOME}/.pyenv"
-fi
-export PATH="$PYENV_ROOT/bin:$PATH"
-if [ -x ~/.pyenv/bin/pyenv ]; then
-  eval "$(~/.pyenv/bin/pyenv init -)"
-  eval "$(~/.pyenv/bin/pyenv virtualenv-init -)"
-fi
-# END 57b557ba-d370-4940-8b71-bcba0ffcc5d4
-
 export EDITOR=vim
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home"
-
-export BNI_REPO_ROOT=~/Code/ButterflyNetwork/software
-export BNI_DEV_ROOT=$BNI_REPO_ROOT/host
-export BNI_BUILD=$BNI_DEV_ROOT/Build
-export BNI_ROOT=$BNI_DEV_ROOT/build-release
-
-# ALIASES
-alias reqs="find . -name '*requirement*'"
-alias ll="ls -l"
-alias dir="ls"
-alias dor="dir"
-alias dockerenv='eval $(docker-machine env default)'
-alias find='gfind -L'
-alias f='find . -iname'
-alias gdiff='git diff --color-words=.'
-alias got='git'
-alias grip='grip -b'  # markdown preview
-alias htop='glances'  # htop doesn't support macOS High Sierra
-alias j='$(pyenv which jupyter) notebook'
-alias ju="julia -e 'using IJulia; IJulia.notebook()'"
-alias k='kill %%'
-alias t='py.test --fast --automated -n auto'
-alias g='googler -t y1 --lucky'  # time 1 year, open first hit
-alias orig="find . -name '*orig*'"
-alias p='git pullall'
-alias pos='source ~/bin/env-butterfly.sh'
-alias py="source ~/bin/env-pyenv-standalone.sh"
-alias sand="./bazel-debug run //host/Applications/ImagingSandbox"
-alias spell='python $BNI_DEV_ROOT/Build/StaticCheck/bniSpell/bniSpellCheck.py'
-alias helios='open $BNI_DEV_ROOT/Applications/HeliosNativeIos/Helios.xcworkspace'
-alias i="cd $BNI_DEV_ROOT/imaging/imaging; pos"
-alias version_helios="cat $BNI_DEV_ROOT/Applications/HeliosNativeAndroid/app/version"
-alias ipy="ipython notebook"
-alias ipy2="ipython2 notebook"
-alias ipy3="ipython3 notebook"
-alias cleanpyc="find . -iname '*.pyc' -exec rm -rf {} \;"
-alias vimup="vim +PlugUpgrade +PlugUpdate +qall"
-
-# MacPorts
-export PATH=$PATH:/opt/local/bin:/opt/local/sbin
-# Homebrew
-export PATH=$PATH:/usr/local/bin:/usr/local/sbin
-
 export PATH=~/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/lib:/opt/X11/lib:$LD_LIBRARY_PATH
-
-# OPENCL
-# export PYOPENCL_CTX=':2' # [2] <pyopencl.Device 'GeForce GT 750M' on 'Apple' at 0x1022700>
-
-# PYTHON
-export PYTHONSTARTUP=~/.pythonrc.py
-# See also pyenv below
-
-# JULIA
-alias julia6="/Applications/Julia-0.6.app/Contents/Resources/julia/bin/julia --quiet"
-alias julia7="/Applications/Julia-0.7.app/Contents/Resources/julia/bin/julia --quiet"
-alias julia1="/Applications/Julia-1.1.app/Contents/Resources/julia/bin/julia --quiet"
-# Escher
-# Parallelization with: Threads.@threads for i = 1:length(...)
-export JULIA_NUM_THREADS=4
-
-# BREW QT5
-#If you build your own software and it requires this formula, you'll need to add to your
-#build variables:
-#export LDFLAGS=-L/usr/local/opt/qt5/lib
-#export CPPFLAGS=-I/usr/local/opt/qt5/include
-
-# QWT
-#export QWT_ROOTDIR=/usr/local/qwt-6.1.2
-#export QWT_ROOTDIR=/usr/local/Cellar/qwt/6.1.2 # from homebrew
-
-# ARRAYFIRE
-# export AF_CUDA_DEFAULT_DEVICE=0
-# export AF_OPENCL_DEFAULT_DEVICE=1
-# export AF_DISABLE_GRAPHICS=1
-# export DYLD_LIBRARY_PATH=/usr/local/Cellar/arrayfire/3.0.0/lib/:$DYLD_LIBRARY_PATH
-# export PYTHONPATH=/Users/cmey/Code/GitHub/arrayfire-python:$PYTHONPATH
-
-# tell fzf to use ripgrep
-export FZF_DEFAULT_COMMAND="rg --files --hidden --smart-case --glob '!.git/*'"
 
 # BASH HISTORY
 # Displayed format.
@@ -108,49 +17,11 @@ export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; histor
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
 
+# Tell fzf to use ripgrep
+export FZF_DEFAULT_COMMAND="rg --files --hidden --smart-case --glob '!.git/*'"
+
 # GIT
 export GIT_PAGER=cat  # don't page with less
-# git mergetool --tool=p4merge
-# Setting the mergetool.keepBackup configuration variable to false
-
-# export GIT_PS1_SHOWCOLORHINTS=true
-# export GIT_PS1_SHOWDIRTYSTATE=  # true
-# export GIT_PS1_SHOWUNTRACKEDFILES=  # true
-# [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
-# if [ -f /usr/local/share/gitprompt.sh ]; then
-#     export GIT_PROMPT_THEME=Solarized # use theme optimized for solarized color scheme
-#     export GIT_PROMPT_ONLY_IN_REPO=1
-#     export GIT_PROMPT_FETCH_REMOTE_STATUS=0  # uncomment to avoid fetching remote status
-#     export GIT_PROMPT_SHOW_UNTRACKED_FILES=no  # can be no, normal or all; determines counting of untracked files
-#     export GIT_PROMPT_SHOW_CHANGED_FILES_COUNT=0 # uncomment to avoid printing the number of changed files
-#     . /usr/local/share/gitprompt.sh
-# fi
-
-if [ -f ~/Code/dotfiles/homebrew-token-export.sh ]; then
-    source ~/Code/dotfiles/homebrew-token-export.sh
-fi
 
 # TEX
 export PATH=/usr/local/opt/texinfo/bin:$PATH
-
-# HOMEBREW configure Completions
-# This function checks whether we have a given program on the system.
-# No need for bulky functions in memory if we don't.
-#
-#have()
-#{
-#    unset -v have
-#    # Completions for system administrator commands are installed as well in
-#    # case completion is attempted via `sudo command ...'.
-#    PATH=$PATH:/sbin:/usr/sbin:/usr/local/sbin type $1 &>/dev/null &&
-#    have="yes"
-#}
-##export -f function_name
-
-#if type brew 2&>/dev/null; then
-#  for completion_file in $(brew --prefix)/etc/bash_completion.d/*; do
-#    echo "$completion_file"
-#    source "$completion_file"
-#  done
-#fi
-
