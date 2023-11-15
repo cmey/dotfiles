@@ -1,7 +1,7 @@
 # ALIASES
 alias fd="fd --hidden --exclude '.git'"
 alias reqs='fd requirement .'
-alias ls='ls --color=auto'
+alias ls='ls -h --color=auto'
 alias l='ls -CF'
 alias la='ls -A'
 alias ll='ls -alF'
