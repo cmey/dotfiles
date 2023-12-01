@@ -2,6 +2,12 @@ sudo apt update
 sudo apt upgrade
 sudo apt install  cmake fd-find fzf git git-lfs grip htop i3 mupdf ranger ripgrep stow tmux tree vlc vim wget
 
+# Put ~/bin in $PATH
+mkdir -p ~/bin
+echo '
+export PATH="~/bin:$PATH"
+' >> ~/.bashrc
+
 # Vim folders
 mkdir -p ~/.vim/
 mkdir -p ~/.vim/files/backup/
@@ -36,9 +42,6 @@ eval "$(pyenv virtualenv-init -)"
 # install python (deps)
 sudo apt-get install libbz2-dev libssl-dev libsqlite3-dev
 pyenv install 3.10.8
-
-mkdir ~/bin
-export PATH="~/bin:$PATH"
 
 # julialang
 curl -fsSL https://install.julialang.org | sh
