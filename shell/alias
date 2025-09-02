@@ -8,6 +8,7 @@ alias ll='ls -alF'
 alias dir="ls"
 alias dor="dir"
 alias got='git'
+alias gst='git status'
 alias grip='grip -b'  # markdown preview
 alias htop='glances'  # htop doesn't support macOS High Sierra
 alias k='kill %%'
